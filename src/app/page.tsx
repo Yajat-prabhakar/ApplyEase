@@ -23,7 +23,7 @@ export default function Home() {
       price: '₹999',
       description:
         'Professional CV crafted by experts from SRCC, IIT, and STEAM organizations. Scrutinized for quality to make you stand out.',
-      link: 'https://tally.so/r/wAkvEN?service=CV+Creation',
+      link: 'https://tally.so/r/wAkvEN',
     },
     {
       icon: <Send className="h-10 w-10 text-primary" />,
@@ -31,7 +31,7 @@ export default function Home() {
       price: '₹499',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
-      link: 'https://tally.so/r/wAkvEN?service=Outreach',
+      link: 'https://tally.so/r/wAkvEN',
     },
     {
       icon: <Users className="h-10 w-10 text-primary" />,
@@ -39,7 +39,7 @@ export default function Home() {
       price: '₹1,999',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
-      link: 'https://tally.so/r/wAkvEN?service=Mentorship',
+      link: 'https://tally.so/r/wAkvEN',
     },
   ];
 
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
             <div className="mt-8">
               <iframe
-                data-tally-src="https://tally.so/embed/mJBEWZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                data-tally-src="https://tally.so/embed/n046r9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                 loading="lazy"
                 width="100%"
                 height="316"
