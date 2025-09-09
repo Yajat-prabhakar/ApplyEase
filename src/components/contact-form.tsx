@@ -47,30 +47,16 @@ const ContactForm = () => {
   }, [state, toast]);
 
   return (
-    <form ref={formRef} action={formAction} className="space-y-4">
-      <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
-        <Input id="name" name="name" placeholder="Your Name" required />
-        {state.errors?.name && (
-          <p className="text-sm font-medium text-destructive">{state.errors.name[0]}</p>
-        )}
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
-        <Input id="email" name="email" type="email" placeholder="Your Email" required />
-        {state.errors?.email && (
-          <p className="text-sm font-medium text-destructive">{state.errors.email[0]}</p>
-        )}
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
-        <Textarea id="message" name="message" placeholder="Your Message" required />
-        {state.errors?.message && (
-          <p className="text-sm font-medium text-destructive">{state.errors.message[0]}</p>
-        )}
-      </div>
-      <SubmitButton />
-    </form>
+    <iframe
+      data-tally-src="https://tally.so/embed/mJBEWZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="316"
+      frameBorder="0"
+      marginHeight="0"
+      marginWidth="0"
+      title="Contact Form"
+    ></iframe>
   );
 };
 
