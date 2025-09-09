@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['PT Sans', 'sans-serif'],
+        headline: ['Playfair Display', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -93,6 +93,12 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      backgroundImage: {
+        'dot-pattern': "radial-gradient(circle at center, hsl(var(--secondary)) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        'dot-pattern': "20px 20px",
+      }
     },
   },
   plugins: [require('tailwindcss-animate')],
