@@ -1,50 +1,35 @@
 "use client";
 
-import { useEffect, useRef, useActionState } from 'react';
-import { useFormStatus } from 'react-dom';
-import { submitContactForm, type FormState } from '@/app/actions';
-import { useToast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-
-const initialState: FormState = {
-  message: '',
-  success: false,
-};
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full">
-      {pending ? 'Sending...' : 'Send Message'}
-    </Button>
-  );
-}
+import { useEffect } from 'react';
 
 const ContactForm = () => {
-  const [state, formAction] = useActionState(submitContactForm, initialState);
-  const { toast } = useToast();
-  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    if (state.message) {
-      if (state.success) {
-        toast({
-          title: 'Success!',
-          description: state.message,
-        });
-        formRef.current?.reset();
-      } else {
-        toast({
-          title: 'Error',
-          description: state.message,
-          variant: 'destructive',
-        });
+    const script = document.createElement('script');
+    script.src = "https://tally.so/widgets/embed.js";
+    script.async = true;
+    script.onload = () => {
+      if (typeof (window as any).Tally !== 'undefined') {
+        (window as any).Tally.loadEmbeds();
+      }
+    };
+    script.onerror = () => {
+      if (typeof (window as any).Tally !== 'undefined') {
+         (window as any).Tally.loadEmbeds();
       }
     }
-  }, [state, toast]);
+
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up the script when the component unmounts
+      const a = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
+      if (a) {
+        document.body.removeChild(a);
+      }
+    };
+  }, []);
+
 
   return (
     <iframe
@@ -53,8 +38,8 @@ const ContactForm = () => {
       width="100%"
       height="316"
       frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
+      marginHeight={0}
+      marginWidth={0}
       title="Contact Form"
     ></iframe>
   );
