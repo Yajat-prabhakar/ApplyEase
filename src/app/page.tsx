@@ -202,7 +202,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/team-collaboration.jpg" // Changed from picsum.photos
+              src="/team-collaboration.jpg"
               width={600}
               height={500}
               alt="Our Team"
