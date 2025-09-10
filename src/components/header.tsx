@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { ThemeToggleButton } from '@/components/theme-toggle-button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,18 +36,20 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-
-        <div className="hidden md:block">
-          <Button asChild>
-            <Link href="#services">Get Started</Link>
-          </Button>
-        </div>
-
-        <div className="md:hidden">
-          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            <span className="sr-only">Toggle menu</span>
-          </Button>
+        
+        <div className="flex items-center gap-2">
+          <div className="hidden md:block">
+            <Button asChild>
+              <Link href="#services">Get Started</Link>
+            </Button>
+          </div>
+          <ThemeToggleButton />
+          <div className="md:hidden">
+            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </div>
         </div>
       </div>
 

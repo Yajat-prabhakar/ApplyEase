@@ -14,6 +14,13 @@ import { FileText, Send, Users, Star, Linkedin } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import ContactForm from '@/components/contact-form';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function Home() {
   const services = [
@@ -64,6 +71,13 @@ export default function Home() {
       name: 'Anika J.',
       title: 'Data Analyst',
       avatar: 'AJ',
+    },
+     {
+      quote:
+        "The team's expertise is top-notch. They transformed my resume and my confidence.",
+      name: 'Sameer K.',
+      title: 'Marketing Specialist',
+      avatar: 'SK',
     },
   ];
 
@@ -131,7 +145,7 @@ export default function Home() {
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
               {services.map((service) => (
-                <Card key={service.title} className="flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <Card key={service.title} className="flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-primary/20">
                   <CardHeader className="items-center">
                     {service.icon}
                     <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
@@ -197,31 +211,49 @@ export default function Home() {
             <h2 className="font-headline text-center text-3xl font-bold tracking-tighter sm:text-5xl">
               From Our Clients
             </h2>
-            <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-3">
-              {testimonials.map((testimonial) => (
-                <Card key={testimonial.name} className="flex flex-col">
-                  <CardContent className="flex-grow p-6">
-                    <div className="flex text-accent">
-                      {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+              }}
+              className="mx-auto mt-12 max-w-5xl"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <Card className="flex h-full flex-col">
+                        <CardContent className="flex-grow p-6">
+                          <div className="flex text-yellow-400">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="h-5 w-5 fill-current" />
+                            ))}
+                          </div>
+                          <blockquote className="mt-4 text-lg font-semibold leading-snug">
+                            "{testimonial.quote}"
+                          </blockquote>
+                        </CardContent>
+                        <CardFooter className="mt-auto border-t p-6">
+                          <div className="flex items-center">
+                            <Avatar className="mr-4 h-12 w-12">
+                              <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                            </Avatar>
+                            <div>
+                              <p className="font-semibold">{testimonial.name}</p>
+                              <p className="text-sm text-muted-foreground">
+                                {testimonial.title}
+                              </p>
+                            </div>
+                          </div>
+                        </CardFooter>
+                      </Card>
                     </div>
-                    <blockquote className="mt-4 text-lg font-semibold leading-snug">
-                      "{testimonial.quote}"
-                    </blockquote>
-                  </CardContent>
-                  <CardFooter className="mt-auto border-t p-6">
-                    <div className="flex items-center">
-                      <Avatar className="mr-4 h-12 w-12">
-                        <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="font-semibold">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                      </div>
-                    </div>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
 
