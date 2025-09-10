@@ -265,11 +265,15 @@ export default function Home() {
                 Have a Question?
               </h2>
               <p className="text-muted-foreground md:text-xl">
-                Fill out the form below and we'll get back to you as soon as possible.
+                Click the button below to open our contact form and we'll get back to you as soon as possible.
               </p>
             </div>
-            <div className="mt-8">
-              <ContactForm />
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg">
+                <a href="https://tally.so/r/n046r9" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
+              </Button>
             </div>
           </div>
         </section>
