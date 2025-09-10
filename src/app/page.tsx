@@ -85,14 +85,14 @@ export default function Home() {
       name: 'Aisha Khan',
       role: 'Founder & Career Strategist',
       credentials: 'SRCC Alumna',
-      image: '/team-member-1.jpg', // Changed to relative path
+      image: 'https://picsum.photos/seed/101/100/100',
       fallback: 'AK',
     },
     {
       name: 'Vikram Singh',
       role: 'Lead Mentor',
       credentials: 'IIT Delhi Graduate',
-      image: '/team-member-2.jpg', // Changed to relative path
+      image: 'https://picsum.photos/seed/102/100/100',
       fallback: 'VS',
     },
   ];
@@ -202,7 +202,8 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/team-collaboration.jpg"
+              src="https://picsum.photos/seed/103/600/500"
+              data-ai-hint="team collaboration"
               width={600}
               height={500}
               alt="Our Team"
