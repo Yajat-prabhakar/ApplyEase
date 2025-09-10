@@ -71,7 +71,7 @@ export default function Home() {
       title: 'Data Analyst',
       avatar: 'AJ',
     },
-     {
+    {
       quote:
         "The team's expertise is top-notch. They transformed my resume and my confidence.",
       name: 'Sameer K.',
@@ -104,21 +104,29 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="home"
-          className="flex w-full items-center justify-center bg-secondary/50 py-20 text-center md:py-32 lg:py-40"
+          className="relative flex h-dvh min-h-[600px] w-full items-center justify-center text-center"
         >
+          <Image
+            src="https://picsum.photos/seed/career/1920/1080"
+            alt="Office workspace"
+            fill
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            data-ai-hint="office workspace"
+          />
+          <div className="absolute inset-0 -z-10 bg-black/60" />
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-3xl mx-auto space-y-4">
-              <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+            <div className="max-w-3xl mx-auto space-y-6">
+              <h1 className="font-headline text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                 Helping You Land Your Dream Job with Expert Services
               </h1>
-              <p className="text-lg text-muted-foreground md:text-xl">
+              <p className="text-lg text-neutral-200 md:text-xl">
                 Build immediate trust with a professional and authentic brand. Our simple process captures your interest without friction.
               </p>
               <div className="flex justify-center gap-4">
                 <Button asChild size="lg">
                   <Link href="#services">Get Started</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
                   <Link href="#about">Learn More</Link>
                 </Button>
               </div>
