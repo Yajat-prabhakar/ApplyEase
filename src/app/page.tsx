@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { FileText, Send, Users, Star, Linkedin } from 'lucide-react';
+import { FileText, Send, Users } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import {
@@ -104,7 +104,7 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="home"
-          className="bg-dot-pattern flex w-full items-center justify-center py-20 text-center md:py-32 lg:py-40"
+          className="flex w-full items-center justify-center bg-secondary/50 py-20 text-center md:py-32 lg:py-40"
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto space-y-4">
@@ -131,7 +131,7 @@ export default function Home() {
           <div className="container mx-auto space-y-12 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-secondary-foreground">
                   Our Services
                 </div>
                 <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -167,7 +167,7 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section id="about" className="w-full bg-muted py-12 md:py-24 lg:py-32">
+        <section id="about" className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
           <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -221,9 +221,9 @@ export default function Home() {
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      <Card className="flex h-full flex-col bg-muted/50 dark:bg-muted/30">
+                      <Card className="flex h-full flex-col bg-muted">
                         <CardContent className="flex-grow p-6">
-                           <blockquote className="mt-4 text-lg font-semibold leading-snug">
+                           <blockquote className="mt-4 text-lg font-semibold leading-snug text-secondary-foreground">
                             "{testimonial.quote}"
                           </blockquote>
                         </CardContent>
@@ -252,7 +252,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="w-full bg-muted py-12 md:py-24 lg:py-32">
+        <section id="contact" className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
           <div className="container mx-auto max-w-3xl px-4 md:px-6">
             <div className="space-y-4 text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
