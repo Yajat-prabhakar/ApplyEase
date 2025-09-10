@@ -98,25 +98,25 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col"> {/* Changed from min-h-dvh */}
+    <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
         <section
           id="home"
-          className="relative flex h-screen min-h-[600px] w-full items-center justify-center text-center" // Changed from h-dvh
+          className="relative flex h-screen min-h-[600px] w-full items-center justify-center text-center"
         >
           <Image 
             src="https://i.ibb.co/h1VDV6Z6/ss2.png"
             alt="Office workspace"
             fill
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            priority // Added priority for hero image
+            priority
           />
           <div className="absolute inset-0 -z-10 bg-black/60" />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto space-y-6">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"> {/* Removed font-headline */}
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                 Helping You Land Your Dream Job with Expert Services
               </h1>
               <p className="text-lg text-neutral-200 md:text-xl">
@@ -142,7 +142,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-secondary-foreground">
                   Our Services
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl"> {/* Removed font-headline */}
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Your Career, Accelerated.
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -151,11 +151,11 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-              {services.map((service, index) => ( // Added index key
+              {services.map((service, index) => (
                 <Card key={index} className="flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                   <CardHeader className="items-center">
                     {service.icon}
-                    <CardTitle className="text-2xl">{service.title}</CardTitle> {/* Removed font-headline */}
+                    <CardTitle className="text-2xl">{service.title}</CardTitle>
                     <p className="text-3xl font-bold text-primary">{service.price}</p>
                   </CardHeader>
                   <CardContent className="flex-grow">
@@ -178,7 +178,7 @@ export default function Home() {
         <section id="about" className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
           <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"> {/* Removed font-headline */}
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Authenticity and Credibility You Can Trust
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -215,7 +215,7 @@ export default function Home() {
         {/* Testimonials Section */}
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-5xl"> {/* Removed font-headline */}
+            <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-5xl">
               From Our Clients
             </h2>
             <Carousel
@@ -263,7 +263,7 @@ export default function Home() {
         <section id="contact" className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
           <div className="container mx-auto max-w-3xl px-4 md:px-6">
             <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl"> {/* Removed font-headline */}
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Have a Question?
               </h2>
               <p className="text-muted-foreground md:text-xl">
