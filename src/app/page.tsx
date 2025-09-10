@@ -13,7 +13,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { FileText, Send, Users, Star, Linkedin } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import ContactForm from '@/components/contact-form';
 import {
   Carousel,
   CarouselContent,
@@ -222,14 +221,9 @@ export default function Home() {
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                      <Card className="flex h-full flex-col">
+                      <Card className="flex h-full flex-col bg-muted/50 dark:bg-muted/30">
                         <CardContent className="flex-grow p-6">
-                          <div className="flex text-yellow-400">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="h-5 w-5 fill-current" />
-                            ))}
-                          </div>
-                          <blockquote className="mt-4 text-lg font-semibold leading-snug">
+                           <blockquote className="mt-4 text-lg font-semibold leading-snug">
                             "{testimonial.quote}"
                           </blockquote>
                         </CardContent>
