@@ -107,7 +107,7 @@ export default function Home() {
           className="relative flex h-screen min-h-[600px] w-full items-center justify-center text-center" // Changed from h-dvh
         >
           <Image
-            src="/ss2.png" // Use your actual image file name
+            src="https://picsum.photos/seed/1/1200/800"
             alt="Office workspace"
             fill
             className="absolute inset-0 -z-10 h-full w-full object-cover"
