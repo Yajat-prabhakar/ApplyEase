@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { BackgroundGradient } from '@/components/background-gradient';
 
 export const metadata: Metadata = {
   title: 'Momentum Careers',
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth dark" suppressHydrationWarning>
+    <html lang="en" className="!scroll-smooth dark h-full" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -22,7 +23,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased h-full">
+        <BackgroundGradient />
         {children}
         <Toaster />
       </body>
