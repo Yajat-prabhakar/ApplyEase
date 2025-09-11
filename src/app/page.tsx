@@ -23,6 +23,7 @@ import {
   TrendingUp,
   Rocket,
   ExternalLink,
+  Star,
 } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -79,6 +80,7 @@ export default function Home() {
       name: 'Priya S.',
       title: 'Software Engineer',
       avatar: 'PS',
+      rating: 5,
     },
     {
       quote:
@@ -86,6 +88,7 @@ export default function Home() {
       name: 'Rohan M.',
       title: 'Product Manager',
       avatar: 'RM',
+      rating: 5,
     },
     {
       quote:
@@ -93,6 +96,7 @@ export default function Home() {
       name: 'Anika J.',
       title: 'Data Analyst',
       avatar: 'AJ',
+      rating: 4,
     },
     {
       quote:
@@ -100,6 +104,7 @@ export default function Home() {
       name: 'Sameer K.',
       title: 'Marketing Specialist',
       avatar: 'SK',
+      rating: 5,
     },
   ];
 
@@ -336,7 +341,7 @@ export default function Home() {
                         </div>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-3xl bg-background text-foreground border-border p-0">
+                    <DialogContent className="sm:max-w-6xl bg-background text-foreground border-border p-0">
                       <DialogHeader className="p-6 pb-0">
                         <div className="flex items-start gap-6">
                           <Avatar className="h-24 w-24 border-4 border-primary">
@@ -359,7 +364,7 @@ export default function Home() {
                           </div>
                         </div>
                       </DialogHeader>
-                      <div className="px-6 py-4 space-y-6 max-h-[70vh] overflow-y-auto">
+                      <div className="px-6 py-4 space-y-6 max-h-[60vh] overflow-y-auto">
                         <div>
                           <h4 className="font-semibold text-xl mb-2">
                             About
@@ -527,7 +532,19 @@ export default function Home() {
                     <div className="p-1 h-full">
                       <Card className="flex h-full flex-col bg-muted">
                         <CardContent className="flex-grow p-6">
-                          <blockquote className="mt-4 text-lg font-semibold leading-snug text-secondary-foreground">
+                           <div className="flex gap-1 mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`h-5 w-5 ${
+                                  i < testimonial.rating
+                                    ? 'text-amber-400 fill-amber-400'
+                                    : 'text-muted-foreground'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                          <blockquote className="text-lg font-semibold leading-snug text-secondary-foreground">
                             &quot;{testimonial.quote}&quot;
                           </blockquote>
                         </CardContent>
