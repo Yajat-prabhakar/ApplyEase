@@ -24,6 +24,8 @@ import {
   Rocket,
   ExternalLink,
   Star,
+  ShoppingBag,
+  MessageSquare,
 } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -520,7 +522,10 @@ export default function Home() {
                           <Card className="flex h-full flex-col bg-muted p-6">
                             <div className="flex gap-1 mb-4">
                               {[...Array(5)].map((_, i) => (
-                                <Skeleton key={i} className="h-5 w-5 rounded-full" />
+                                <Skeleton
+                                  key={i}
+                                  className="h-5 w-5 rounded-full"
+                                />
                               ))}
                             </div>
                             <Skeleton className="h-4 w-full mb-2" />
@@ -541,44 +546,114 @@ export default function Home() {
                         key={index}
                         className="md:basis-1/2 lg:basis-1/3"
                       >
-                        <div className="p-1 h-full">
-                          <Card className="flex h-full flex-col bg-muted">
-                            <CardContent className="flex-grow p-6">
-                              <div className="flex gap-1 mb-4">
-                                {[...Array(5)].map((_, i) => (
-                                  <Star
-                                    key={i}
-                                    className={`h-5 w-5 ${
-                                      i < testimonial.rating
-                                        ? 'text-amber-400 fill-amber-400'
-                                        : 'text-muted-foreground'
-                                    }`}
-                                  />
-                                ))}
-                              </div>
-                              <blockquote className="text-lg font-semibold leading-snug text-secondary-foreground">
-                                &quot;{testimonial.quote}&quot;
-                              </blockquote>
-                            </CardContent>
-                            <CardFooter className="mt-auto border-t p-6">
-                              <div className="flex items-center">
-                                <Avatar className="mr-4 h-12 w-12">
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <div className="p-1 h-full w-full">
+                              <Card className="flex h-full w-full flex-col bg-muted hover:bg-muted/80 transition-colors cursor-pointer">
+                                <CardContent className="flex-grow p-6">
+                                  <div className="flex gap-1 mb-4">
+                                    {[...Array(5)].map((_, i) => (
+                                      <Star
+                                        key={i}
+                                        className={`h-5 w-5 ${
+                                          i < testimonial.rating
+                                            ? 'text-amber-400 fill-amber-400'
+                                            : 'text-muted-foreground'
+                                        }`}
+                                      />
+                                    ))}
+                                  </div>
+                                  <blockquote className="text-lg font-semibold leading-snug text-secondary-foreground">
+                                    &quot;{testimonial.quote}&quot;
+                                  </blockquote>
+                                </CardContent>
+                                <CardFooter className="mt-auto border-t p-6">
+                                  <div className="flex items-center">
+                                    <Avatar className="mr-4 h-12 w-12">
+                                      <AvatarFallback>
+                                        {testimonial.avatar}
+                                      </AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                      <p className="font-semibold">
+                                        {testimonial.name}
+                                      </p>
+                                      <p className="text-sm text-muted-foreground">
+                                        {testimonial.title}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </CardFooter>
+                              </Card>
+                            </div>
+                          </DialogTrigger>
+                          <DialogContent className="sm:max-w-3xl bg-background text-foreground border-border p-0">
+                            <DialogHeader className="p-6 pb-0">
+                              <div className="flex items-start gap-6">
+                                <Avatar className="h-24 w-24 border-4 border-primary">
                                   <AvatarFallback>
                                     {testimonial.avatar}
                                   </AvatarFallback>
                                 </Avatar>
-                                <div>
-                                  <p className="font-semibold">
+                                <div className="pt-2">
+                                  <DialogTitle className="text-3xl font-bold">
                                     {testimonial.name}
-                                  </p>
-                                  <p className="text-sm text-muted-foreground">
+                                  </DialogTitle>
+                                  <DialogDescription className="text-lg text-muted-foreground mt-1">
                                     {testimonial.title}
-                                  </p>
+                                  </DialogDescription>
+                                  <div className="flex gap-1 mt-2">
+                                    {[...Array(5)].map((_, i) => (
+                                      <Star
+                                        key={i}
+                                        className={`h-5 w-5 ${
+                                          i < testimonial.rating
+                                            ? 'text-amber-400 fill-amber-400'
+                                            : 'text-muted-foreground/50'
+                                        }`}
+                                      />
+                                    ))}
+                                  </div>
                                 </div>
                               </div>
-                            </CardFooter>
-                          </Card>
-                        </div>
+                            </DialogHeader>
+                            <div className="px-6 py-4 space-y-6 max-h-[60vh] overflow-y-auto">
+                              <div>
+                                <h4 className="font-semibold text-xl mb-2">
+                                  About
+                                </h4>
+                                <p className="text-muted-foreground">
+                                  {testimonial.bio}
+                                </p>
+                              </div>
+
+                              <div className="space-y-4">
+                                <div>
+                                  <h4 className="font-semibold text-xl mb-2 flex items-center gap-2">
+                                    <ShoppingBag className="h-5 w-5 text-primary" />
+                                    Service Used
+                                  </h4>
+                                  <p className="text-muted-foreground">
+                                    {testimonial.service}
+                                  </p>
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-xl mb-2 flex items-center gap-2">
+                                    <MessageSquare className="h-5 w-5 text-primary" />
+                                    Feedback
+                                  </h4>
+                                  <blockquote className="text-muted-foreground border-l-4 pl-4 italic">
+                                    &quot;{testimonial.quote}&quot;
+                                  </blockquote>
+                                </div>
+                              </div>
+                            </div>
+                            <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                              <X className="h-4 w-4" />
+                              <span className="sr-only">Close</span>
+                            </DialogClose>
+                          </DialogContent>
+                        </Dialog>
                       </CarouselItem>
                     ))}
               </CarouselContent>
@@ -589,14 +664,18 @@ export default function Home() {
         </section>
 
         {/* Feedback Section */}
-        <section id="feedback" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+        <section
+          id="feedback"
+          className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50"
+        >
           <div className="container mx-auto max-w-3xl px-4 md:px-6">
             <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Share Your Feedback
               </h2>
               <p className="text-muted-foreground md:text-xl">
-                We’d love to hear your thoughts — help us improve by submitting your feedback!
+                We’d love to hear your thoughts — help us improve by submitting
+                your feedback!
               </p>
             </div>
             <div className="mt-8 flex justify-center">
