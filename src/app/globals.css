@@ -61,7 +61,7 @@
   /* For Firefox */
   html {
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--primary)) hsl(var(--secondary));
+    scrollbar-color: hsl(var(--primary)) transparent;
   }
 
   /* For Webkit browsers (Chrome, Safari, Edge) */
@@ -71,14 +71,12 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--secondary));
-    border-radius: 10px;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: hsl(var(--primary));
     border-radius: 10px;
-    border: 2px solid hsl(var(--secondary));
   }
 
   ::-webkit-scrollbar-thumb:hover {
