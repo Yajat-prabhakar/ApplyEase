@@ -135,22 +135,22 @@ export default function Home() {
       ],
       projects: [
         {
-          icon: <Rocket className="h-6 w-6 text-purple-400" />,
           title: 'CareerPath AI',
           description: 'An AI-powered platform for personalized career roadmap generation.',
           link: '#',
+          image: 'https://picsum.photos/seed/201/300/200'
         },
         {
-          icon: <Rocket className="h-6 w-6 text-purple-400" />,
           title: 'Resume-Analyzer',
           description: 'A tool that uses NLP to score resumes against job descriptions.',
           link: '#',
+          image: 'https://picsum.photos/seed/202/300/200'
         },
         {
-          icon: <Rocket className="h-6 w-6 text-purple-400" />,
           title: 'Interview Simulator',
           description: 'VR-based interview practice with real-time feedback.',
           link: '#',
+          image: 'https://picsum.photos/seed/203/300/200'
         },
       ],
     },
@@ -185,21 +185,21 @@ export default function Home() {
       ],
       projects: [
         {
-          icon: <Rocket className="h-6 w-6 text-purple-400" />,
           title: 'Project MentorMatch',
           description: 'An algorithm to match mentees with the most suitable mentors.',
           link: '#',
+          image: 'https://picsum.photos/seed/204/300/200'
         },
         {
-          icon: <Rocket className="h-6 w-6 text-purple-400" />,
           title: 'SkillGap Analyzer',
           description: 'A tool for identifying and bridging skill gaps for career advancement.',
           link: '#',
+          image: 'https://picsum.photos/seed/205/300/200'
         },
         {
-          icon: <Rocket className="h-6 w-6 text-purple-400" />,
           title: 'Tech-Interview PrepKit',
           description: 'A comprehensive resource hub for technical interview preparation.',
+          image: 'https://picsum.photos/seed/206/300/200'
         },
       ],
     },
@@ -425,9 +425,11 @@ export default function Home() {
                                   className="md:basis-1/2 lg:basis-1/2"
                                 >
                                   <div className="p-1 h-full">
-                                    <Card className="flex flex-col h-full bg-muted/50">
-                                      <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-                                        {project.icon}
+                                    <Card className="flex flex-col h-full bg-muted/50 overflow-hidden">
+                                      <div className="relative h-40 w-full">
+                                        <Image src={project.image} alt={project.title} fill className="object-cover" />
+                                      </div>
+                                      <CardHeader>
                                         <CardTitle className="text-md font-medium">
                                           {project.title}
                                         </CardTitle>
@@ -590,5 +592,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
