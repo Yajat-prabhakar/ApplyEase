@@ -588,10 +588,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Feedback Section */}
+        <section id="feedback" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+          <div className="container mx-auto max-w-3xl px-4 md:px-6">
+            <div className="space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Share Your Feedback
+              </h2>
+              <p className="text-muted-foreground md:text-xl">
+                We’d love to hear your thoughts — help us improve by submitting your feedback!
+              </p>
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg">
+                <a
+                  href="https://tally.so/r/mORBgY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Submit Feedback
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section
           id="contact"
-          className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32"
+          className="w-full py-12 md:py-24 lg:py-32"
         >
           <div className="container mx-auto max-w-3xl px-4 md:px-6">
             <div className="space-y-4 text-center">

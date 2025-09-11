@@ -23,6 +23,9 @@ const Footer = () => {
           <Link href="#about" className="text-sm hover:underline underline-offset-4">
             About
           </Link>
+          <Link href="#feedback" className="text-sm hover:underline underline-offset-4">
+            Feedback
+          </Link>
           <Link href="#contact" className="text-sm hover:underline underline-offset-4">
             Contact
           </Link>
