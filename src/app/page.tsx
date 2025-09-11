@@ -21,6 +21,8 @@ import {
   Trophy,
   Briefcase,
   TrendingUp,
+  Rocket,
+  ExternalLink,
 } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -131,6 +133,26 @@ export default function Home() {
             'Maintained a near-perfect satisfaction rate through personalized service.',
         },
       ],
+      projects: [
+        {
+          icon: <Rocket className="h-6 w-6 text-purple-400" />,
+          title: 'CareerPath AI',
+          description: 'An AI-powered platform for personalized career roadmap generation.',
+          link: '#',
+        },
+        {
+          icon: <Rocket className="h-6 w-6 text-purple-400" />,
+          title: 'Resume-Analyzer',
+          description: 'A tool that uses NLP to score resumes against job descriptions.',
+          link: '#',
+        },
+        {
+          icon: <Rocket className="h-6 w-6 text-purple-400" />,
+          title: 'Interview Simulator',
+          description: 'VR-based interview practice with real-time feedback.',
+          link: '#',
+        },
+      ],
     },
     {
       name: 'Vikram Singh',
@@ -159,6 +181,25 @@ export default function Home() {
           title: 'Industry Speaker',
           description:
             'Frequent speaker at major tech and career development conferences.',
+        },
+      ],
+      projects: [
+        {
+          icon: <Rocket className="h-6 w-6 text-purple-400" />,
+          title: 'Project MentorMatch',
+          description: 'An algorithm to match mentees with the most suitable mentors.',
+          link: '#',
+        },
+        {
+          icon: <Rocket className="h-6 w-6 text-purple-400" />,
+          title: 'SkillGap Analyzer',
+          description: 'A tool for identifying and bridging skill gaps for career advancement.',
+          link: '#',
+        },
+        {
+          icon: <Rocket className="h-6 w-6 text-purple-400" />,
+          title: 'Tech-Interview PrepKit',
+          description: 'A comprehensive resource hub for technical interview preparation.',
         },
       ],
     },
@@ -295,9 +336,9 @@ export default function Home() {
                         </div>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-2xl bg-background text-foreground border-border p-0">
+                    <DialogContent className="sm:max-w-3xl bg-background text-foreground border-border p-0">
                       <DialogHeader className="p-6 pb-0">
-                        <div className="flex items-center gap-6">
+                        <div className="flex items-start gap-6">
                           <Avatar className="h-24 w-24 border-4 border-primary">
                             <AvatarImage
                               src={member.image}
@@ -305,7 +346,7 @@ export default function Home() {
                             />
                             <AvatarFallback>{member.fallback}</AvatarFallback>
                           </Avatar>
-                          <div>
+                          <div className="pt-2">
                             <DialogTitle className="text-3xl font-bold">
                               {member.name}
                             </DialogTitle>
@@ -318,18 +359,18 @@ export default function Home() {
                           </div>
                         </div>
                       </DialogHeader>
-                      <div className="px-6 py-4 space-y-6">
+                      <div className="px-6 py-4 space-y-6 max-h-[70vh] overflow-y-auto">
                         <div>
-                          <h4 className="font-semibold text-lg mb-2">
+                          <h4 className="font-semibold text-xl mb-2">
                             About
                           </h4>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-muted-foreground">
                             {member.bio}
                           </p>
                         </div>
 
                         <div>
-                          <h4 className="font-semibold text-lg mb-4">
+                          <h4 className="font-semibold text-xl mb-4">
                             Achievements
                           </h4>
                           <Carousel
@@ -342,7 +383,7 @@ export default function Home() {
                               {member.achievements.map((achievement, i) => (
                                 <CarouselItem
                                   key={i}
-                                  className="md:basis-1/2 lg:basis-1/3"
+                                  className="md:basis-1/2 lg:basis-1/2"
                                 >
                                   <div className="p-1 h-full">
                                     <Card className="flex flex-col h-full bg-muted/50">
@@ -366,8 +407,60 @@ export default function Home() {
                             <CarouselNext className="mr-12" />
                           </Carousel>
                         </div>
+                        
+                        <div>
+                          <h4 className="font-semibold text-xl mb-4">
+                            Projects
+                          </h4>
+                          <Carousel
+                            opts={{
+                              align: 'start',
+                            }}
+                            className="w-full"
+                          >
+                            <CarouselContent>
+                              {member.projects.map((project, i) => (
+                                <CarouselItem
+                                  key={i}
+                                  className="md:basis-1/2 lg:basis-1/2"
+                                >
+                                  <div className="p-1 h-full">
+                                    <Card className="flex flex-col h-full bg-muted/50">
+                                      <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
+                                        {project.icon}
+                                        <CardTitle className="text-md font-medium">
+                                          {project.title}
+                                        </CardTitle>
+                                      </CardHeader>
+                                      <CardContent className='flex-grow'>
+                                        <p className="text-xs text-muted-foreground">
+                                          {project.description}
+                                        </p>
+                                      </CardContent>
+                                      {project.link && (
+                                        <CardFooter className="pt-4">
+                                          <Button asChild size='sm' variant='outline' className="w-full">
+                                            <a
+                                              href={project.link}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                            >
+                                              View Project <ExternalLink className="ml-2 h-4 w-4"/>
+                                            </a>
+                                          </Button>
+                                        </CardFooter>
+                                      )}
+                                    </Card>
+                                  </div>
+                                </CarouselItem>
+                              ))}
+                            </CarouselContent>
+                            <CarouselPrevious className="ml-12" />
+                            <CarouselNext className="mr-12" />
+                          </Carousel>
+                        </div>
                       </div>
-                      <div className="flex justify-between items-center bg-muted/50 p-4 mt-4">
+                      <div className="flex justify-between items-center bg-muted/50 p-4 mt-auto">
                         <p className="text-sm text-muted-foreground">
                           Connect with {member.name.split(' ')[0]}
                         </p>
@@ -497,3 +590,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
