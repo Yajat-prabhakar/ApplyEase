@@ -12,7 +12,16 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { FileText, Send, Users, Mail, Linkedin } from 'lucide-react';
+import {
+  FileText,
+  Send,
+  Users,
+  Mail,
+  Linkedin,
+  Trophy,
+  Briefcase,
+  TrendingUp,
+} from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import {
@@ -102,6 +111,26 @@ export default function Home() {
       email: 'aisha.khan@momentumcareers.com',
       linkedin: 'https://www.linkedin.com/in/aishakhan',
       bio: 'Aisha is a passionate career strategist with a decade of experience helping professionals achieve their dream careers. A proud SRCC alumna, she specializes in crafting compelling narratives that make candidates stand out in a competitive job market.',
+      achievements: [
+        {
+          icon: <Trophy className="h-6 w-6 text-amber-400" />,
+          title: 'Top Career Coach 2023',
+          description:
+            'Recognized for outstanding success in client placements.',
+        },
+        {
+          icon: <Briefcase className="h-6 w-6 text-blue-400" />,
+          title: '500+ Placements',
+          description:
+            'Successfully placed over 500 candidates in top-tier companies.',
+        },
+        {
+          icon: <TrendingUp className="h-6 w-6 text-green-400" />,
+          title: '98% Client Satisfaction',
+          description:
+            'Maintained a near-perfect satisfaction rate through personalized service.',
+        },
+      ],
     },
     {
       name: 'Vikram Singh',
@@ -112,6 +141,26 @@ export default function Home() {
       email: 'vikram.singh@momentumcareers.com',
       linkedin: 'https://www.linkedin.com/in/vikramsingh',
       bio: 'Vikram is an IIT Delhi graduate and a seasoned industry expert with a passion for mentoring the next generation of leaders. He provides invaluable guidance on career growth, interview preparation, and skill development, helping mentees navigate their professional journey with confidence.',
+      achievements: [
+        {
+          icon: <Trophy className="h-6 w-6 text-amber-400" />,
+          title: 'Innovation in Mentorship Award',
+          description:
+            'Awarded for developing a groundbreaking mentorship framework.',
+        },
+        {
+          icon: <Briefcase className="h-6 w-6 text-blue-400" />,
+          title: '100+ Mentees',
+          description:
+            'Guided over 100 young professionals to achieve their career goals.',
+        },
+        {
+          icon: <TrendingUp className="h-6 w-6 text-green-400" />,
+          title: 'Industry Speaker',
+          description:
+            'Frequent speaker at major tech and career development conferences.',
+        },
+      ],
     },
   ];
 
@@ -246,18 +295,21 @@ export default function Home() {
                         </div>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border">
-                      <DialogHeader>
-                        <div className="flex items-center gap-4">
-                          <Avatar className="h-20 w-20">
-                            <AvatarImage src={member.image} alt={member.name} />
+                    <DialogContent className="sm:max-w-2xl bg-background text-foreground border-border p-0">
+                      <DialogHeader className="p-6 pb-0">
+                        <div className="flex items-center gap-6">
+                          <Avatar className="h-24 w-24 border-4 border-primary">
+                            <AvatarImage
+                              src={member.image}
+                              alt={member.name}
+                            />
                             <AvatarFallback>{member.fallback}</AvatarFallback>
                           </Avatar>
                           <div>
-                            <DialogTitle className="text-2xl font-bold">
+                            <DialogTitle className="text-3xl font-bold">
                               {member.name}
                             </DialogTitle>
-                            <DialogDescription className="text-md text-muted-foreground">
+                            <DialogDescription className="text-lg text-muted-foreground mt-1">
                               {member.role} -{' '}
                               <span className="font-semibold text-primary">
                                 {member.credentials}
@@ -266,26 +318,77 @@ export default function Home() {
                           </div>
                         </div>
                       </DialogHeader>
-                      <div className="py-4">
-                        <p className="text-sm text-muted-foreground">
-                          {member.bio}
-                        </p>
+                      <div className="px-6 py-4 space-y-6">
+                        <div>
+                          <h4 className="font-semibold text-lg mb-2">
+                            About
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            {member.bio}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h4 className="font-semibold text-lg mb-4">
+                            Achievements
+                          </h4>
+                          <Carousel
+                            opts={{
+                              align: 'start',
+                            }}
+                            className="w-full"
+                          >
+                            <CarouselContent>
+                              {member.achievements.map((achievement, i) => (
+                                <CarouselItem
+                                  key={i}
+                                  className="md:basis-1/2 lg:basis-1/3"
+                                >
+                                  <div className="p-1 h-full">
+                                    <Card className="flex flex-col h-full bg-muted/50">
+                                      <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
+                                        {achievement.icon}
+                                        <CardTitle className="text-md font-medium">
+                                          {achievement.title}
+                                        </CardTitle>
+                                      </CardHeader>
+                                      <CardContent>
+                                        <p className="text-xs text-muted-foreground">
+                                          {achievement.description}
+                                        </p>
+                                      </CardContent>
+                                    </Card>
+                                  </div>
+                                </CarouselItem>
+                              ))}
+                            </CarouselContent>
+                            <CarouselPrevious className="ml-12" />
+                            <CarouselNext className="mr-12" />
+                          </Carousel>
+                        </div>
                       </div>
-                      <div className="flex justify-start gap-4">
-                        <a
-                          href={`mailto:${member.email}`}
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          <Mail className="h-6 w-6" />
-                        </a>
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          <Linkedin className="h-6 w-6" />
-                        </a>
+                      <div className="flex justify-between items-center bg-muted/50 p-4 mt-4">
+                        <p className="text-sm text-muted-foreground">
+                          Connect with {member.name.split(' ')[0]}
+                        </p>
+                        <div className="flex justify-end gap-4">
+                          <a
+                            href={`mailto:${member.email}`}
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            <Mail className="h-6 w-6" />
+                            <span className="sr-only">Email</span>
+                          </a>
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            <Linkedin className="h-6 w-6" />
+                            <span className="sr-only">LinkedIn</span>
+                          </a>
+                        </div>
                       </div>
                       <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
                         <X className="h-4 w-4" />
