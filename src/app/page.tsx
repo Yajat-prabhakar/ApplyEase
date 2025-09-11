@@ -1,3 +1,5 @@
+
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -10,7 +12,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { FileText, Send, Users } from 'lucide-react';
+import { FileText, Send, Users, Mail, Linkedin } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import {
@@ -20,6 +22,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogDescription,
+  DialogClose,
+} from '@/components/ui/dialog';
+import { X } from 'lucide-react';
 
 export default function Home() {
   const services = [
@@ -87,6 +99,9 @@ export default function Home() {
       credentials: 'SRCC Alumna',
       image: 'https://picsum.photos/seed/101/100/100',
       fallback: 'AK',
+      email: 'aisha.khan@momentumcareers.com',
+      linkedin: 'https://www.linkedin.com/in/aishakhan',
+      bio: 'Aisha is a passionate career strategist with a decade of experience helping professionals achieve their dream careers. A proud SRCC alumna, she specializes in crafting compelling narratives that make candidates stand out in a competitive job market.',
     },
     {
       name: 'Vikram Singh',
@@ -94,6 +109,9 @@ export default function Home() {
       credentials: 'IIT Delhi Graduate',
       image: 'https://picsum.photos/seed/102/100/100',
       fallback: 'VS',
+      email: 'vikram.singh@momentumcareers.com',
+      linkedin: 'https://www.linkedin.com/in/vikramsingh',
+      bio: 'Vikram is an IIT Delhi graduate and a seasoned industry expert with a passion for mentoring the next generation of leaders. He provides invaluable guidance on career growth, interview preparation, and skill development, helping mentees navigate their professional journey with confidence.',
     },
   ];
 
@@ -106,7 +124,7 @@ export default function Home() {
           id="home"
           className="relative flex h-screen min-h-[600px] w-full items-center justify-center text-center"
         >
-          <Image 
+          <Image
             src="https://i.ibb.co/h1VDV6Z6/ss2.png"
             alt="Office workspace"
             fill
@@ -120,13 +138,19 @@ export default function Home() {
                 Helping You Land Your Dream Job with Expert Services
               </h1>
               <p className="text-lg text-neutral-200 md:text-xl">
-                Build immediate trust with a professional and authentic brand. Our simple process captures your interest without friction.
+                Build immediate trust with a professional and authentic brand.
+                Our simple process captures your interest without friction.
               </p>
               <div className="flex justify-center gap-4">
                 <Button asChild size="lg">
                   <Link href="#services">Get Started</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="text-white border-white hover:bg-white hover:text-black"
+                >
                   <Link href="#about">Learn More</Link>
                 </Button>
               </div>
@@ -146,24 +170,36 @@ export default function Home() {
                   Your Career, Accelerated.
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a suite of services designed to give you a competitive edge in the job market.
+                  We offer a suite of services designed to give you a
+                  competitive edge in the job market.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
               {services.map((service, index) => (
-                <Card key={index} className="flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <Card
+                  key={index}
+                  className="flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                >
                   <CardHeader className="items-center">
                     {service.icon}
                     <CardTitle className="text-2xl">{service.title}</CardTitle>
-                    <p className="text-3xl font-bold text-primary">{service.price}</p>
+                    <p className="text-3xl font-bold text-primary">
+                      {service.price}
+                    </p>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <CardDescription className="text-center">{service.description}</CardDescription>
+                    <CardDescription className="text-center">
+                      {service.description}
+                    </CardDescription>
                   </CardContent>
                   <CardFooter>
                     <Button asChild className="w-full">
-                      <a href={service.link} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={service.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         I'm Interested
                       </a>
                     </Button>
@@ -175,29 +211,88 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section id="about" className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
+        <section
+          id="about"
+          className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32"
+        >
           <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Authenticity and Credibility You Can Trust
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We are a team of dedicated professionals from top institutions like SRCC, IIT, and STEAM organizations, passionate about helping you achieve your career goals. Our focus is on building trust through transparent, high-quality services.
+                We are a team of dedicated professionals from top institutions
+                like SRCC, IIT, and STEAM organizations, passionate about
+                helping you achieve your career goals. Our focus is on building
+                trust through transparent, high-quality services.
               </p>
               <div className="flex flex-col gap-4">
                 {teamMembers.map((member, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <Avatar className="h-16 w-16">
-                      <AvatarImage src={member.image} alt={member.name} />
-                      <AvatarFallback>{member.fallback}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="text-lg font-bold">{member.name}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        {member.role} - <span className="font-semibold text-primary">{member.credentials}</span>
-                      </p>
-                    </div>
-                  </div>
+                  <Dialog key={index}>
+                    <DialogTrigger asChild>
+                      <button className="flex items-center gap-4 text-left hover:bg-muted/50 p-2 rounded-lg transition-colors">
+                        <Avatar className="h-16 w-16">
+                          <AvatarImage src={member.image} alt={member.name} />
+                          <AvatarFallback>{member.fallback}</AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <h3 className="text-lg font-bold">{member.name}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            {member.role} -{' '}
+                            <span className="font-semibold text-primary">
+                              {member.credentials}
+                            </span>
+                          </p>
+                        </div>
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border">
+                      <DialogHeader>
+                        <div className="flex items-center gap-4">
+                          <Avatar className="h-20 w-20">
+                            <AvatarImage src={member.image} alt={member.name} />
+                            <AvatarFallback>{member.fallback}</AvatarFallback>
+                          </Avatar>
+                          <div>
+                            <DialogTitle className="text-2xl font-bold">
+                              {member.name}
+                            </DialogTitle>
+                            <DialogDescription className="text-md text-muted-foreground">
+                              {member.role} -{' '}
+                              <span className="font-semibold text-primary">
+                                {member.credentials}
+                              </span>
+                            </DialogDescription>
+                          </div>
+                        </div>
+                      </DialogHeader>
+                      <div className="py-4">
+                        <p className="text-sm text-muted-foreground">
+                          {member.bio}
+                        </p>
+                      </div>
+                      <div className="flex justify-start gap-4">
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <Mail className="h-6 w-6" />
+                        </a>
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <Linkedin className="h-6 w-6" />
+                        </a>
+                      </div>
+                      <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                        <X className="h-4 w-4" />
+                        <span className="sr-only">Close</span>
+                      </DialogClose>
+                    </DialogContent>
+                  </Dialog>
                 ))}
               </div>
             </div>
@@ -227,7 +322,10 @@ export default function Home() {
             >
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/3"
+                  >
                     <div className="p-1 h-full">
                       <Card className="flex h-full flex-col bg-muted">
                         <CardContent className="flex-grow p-6">
@@ -238,10 +336,14 @@ export default function Home() {
                         <CardFooter className="mt-auto border-t p-6">
                           <div className="flex items-center">
                             <Avatar className="mr-4 h-12 w-12">
-                              <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                              <AvatarFallback>
+                                {testimonial.avatar}
+                              </AvatarFallback>
                             </Avatar>
                             <div>
-                              <p className="font-semibold">{testimonial.name}</p>
+                              <p className="font-semibold">
+                                {testimonial.name}
+                              </p>
                               <p className="text-sm text-muted-foreground">
                                 {testimonial.title}
                               </p>
@@ -260,19 +362,27 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32">
+        <section
+          id="contact"
+          className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32"
+        >
           <div className="container mx-auto max-w-3xl px-4 md:px-6">
             <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Have a Question?
               </h2>
               <p className="text-muted-foreground md:text-xl">
-                Click the button below to open our contact form and we&apos;ll get back to you as soon as possible.
+                Click the button below to open our contact form and we&apos;ll
+                get back to you as soon as possible.
               </p>
             </div>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
-                <a href="https://tally.so/r/n046r9" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://tally.so/r/n046r9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contact Us
                 </a>
               </Button>
