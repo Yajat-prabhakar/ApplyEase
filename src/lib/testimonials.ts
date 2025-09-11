@@ -1,4 +1,3 @@
-
 'use server';
 
 export interface Testimonial {
@@ -19,7 +18,7 @@ const testimonials: Testimonial[] = [
     title: 'Software Engineer',
     avatar: 'PS',
     rating: 5,
-    bio: 'Priya is a dedicated software engineer with a passion for creating innovative solutions. After struggling to get noticed by top tech companies, she turned to Momentum Careers to revamp her professional brand.',
+    bio: 'I am a dedicated software engineer with a passion for creating innovative solutions. After struggling to get noticed by top tech companies, I turned to Momentum Careers to revamp my professional brand.',
     service: 'CV Creation Service',
   },
   {
@@ -29,7 +28,7 @@ const testimonials: Testimonial[] = [
     title: 'Product Manager',
     avatar: 'RM',
     rating: 5,
-    bio: 'Rohan was looking to transition from a technical role to product management. The mentorship program provided him with the strategic guidance and industry insights he needed to make the leap confidently.',
+    bio: 'I was looking to transition from a technical role to product management. The mentorship program provided me with the strategic guidance and industry insights I needed to make the leap confidently.',
     service: 'Mentorship Service',
   },
   {
@@ -39,7 +38,7 @@ const testimonials: Testimonial[] = [
     title: 'Data Analyst',
     avatar: 'AJ',
     rating: 4,
-    bio: 'As a skilled data analyst, Anika knew her worth but found it challenging to get her foot in the door at leading firms. The outreach service connected her with the right people, fast-tracking her job search.',
+    bio: 'As a skilled data analyst, I knew my worth but found it challenging to get my foot in the door at leading firms. The outreach service connected me with the right people, fast-tracking my job search.',
     service: 'Outreach Service',
   },
   {
@@ -49,7 +48,7 @@ const testimonials: Testimonial[] = [
     title: 'Marketing Specialist',
     avatar: 'SK',
     rating: 5,
-    bio: 'Sameer had a strong marketing background but his resume wasn’t reflecting his true potential. The CV creation service helped him craft a compelling narrative that immediately caught the attention of recruiters.',
+    bio: 'I had a strong marketing background but my resume wasn’t reflecting my true potential. The CV creation service helped me craft a compelling narrative that immediately caught the attention of recruiters.',
     service: 'CV Creation Service',
   },
 ];
