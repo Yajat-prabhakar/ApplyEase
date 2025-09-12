@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
           <Briefcase className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold">Momentum Careers</span>
+          <span className="text-xl font-bold">Apply Ease</span>
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-6">

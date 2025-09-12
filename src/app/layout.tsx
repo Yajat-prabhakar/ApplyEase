@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { BackgroundGradient } from '@/components/background-gradient';
 
 export const metadata: Metadata = {
-  title: 'Momentum Careers',
+  title: 'Apply Ease',
   description: 'Helping you land your dream job with expert services.',
 };
 
