@@ -18,14 +18,10 @@ import {
   Users,
   Mail,
   Linkedin,
-  Trophy,
-  Briefcase,
-  TrendingUp,
-  Rocket,
-  ExternalLink,
   Star,
   ShoppingBag,
   MessageSquare,
+  Building,
 } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -45,6 +41,7 @@ import {
   DialogDescription,
   DialogClose,
 } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
 import { getTestimonials, Testimonial } from '@/lib/testimonials';
 import { useEffect, useState } from 'react';
@@ -97,106 +94,75 @@ export default function Home() {
   }, []);
 
   const teamMembers = [
-    {
-      name: 'Aisha Khan',
-      role: 'Founder & Career Strategist',
-      credentials: 'SRCC Alumna',
-      image: 'https://picsum.photos/seed/101/100/100',
-      fallback: 'AK',
-      email: 'aisha.khan@applyease.com',
-      linkedin: 'https://www.linkedin.com/in/aishakhan',
-      bio: 'Aisha is a passionate career strategist with a decade of experience helping professionals achieve their dream careers. A proud SRCC alumna, she specializes in crafting compelling narratives that make candidates stand out in a competitive job market.',
-      achievements: [
-        {
-          icon: <Trophy className="h-6 w-6 text-amber-400" />,
-          title: 'Top Career Coach 2023',
-          description:
-            'Recognized for outstanding success in client placements.',
-        },
-        {
-          icon: <Briefcase className="h-6 w-6 text-blue-400" />,
-          title: '500+ Placements',
-          description:
-            'Successfully placed over 500 candidates in top-tier companies.',
-        },
-        {
-          icon: <TrendingUp className="h-6 w-6 text-green-400" />,
-          title: '98% Client Satisfaction',
-          description:
-            'Maintained a near-perfect satisfaction rate through personalized service.',
-        },
-      ],
-      projects: [
-        {
-          title: 'CareerPath AI',
-          description: 'An AI-powered platform for personalized career roadmap generation.',
-          link: '#',
-          image: 'https://picsum.photos/seed/201/300/200'
-        },
-        {
-          title: 'Resume-Analyzer',
-          description: 'A tool that uses NLP to score resumes against job descriptions.',
-          link: '#',
-          image: 'https://picsum.photos/seed/202/300/200'
-        },
-        {
-          title: 'Interview Simulator',
-          description: 'VR-based interview practice with real-time feedback.',
-          link: '#',
-          image: 'https://picsum.photos/seed/203/300/200'
-        },
-      ],
-    },
-    {
-      name: 'Vikram Singh',
-      role: 'Lead Mentor',
-      credentials: 'IIT Delhi Graduate',
-      image: 'https://picsum.photos/seed/102/100/100',
-      fallback: 'VS',
-      email: 'vikram.singh@applyease.com',
-      linkedin: 'https://www.linkedin.com/in/vikramsingh',
-      bio: 'Vikram is an IIT Delhi graduate and a seasoned industry expert with a passion for mentoring the next generation of leaders. He provides invaluable guidance on career growth, interview preparation, and skill development, helping mentees navigate their professional journey with confidence.',
-      achievements: [
-        {
-          icon: <Trophy className="h-6 w-6 text-amber-400" />,
-          title: 'Innovation in Mentorship Award',
-          description:
-            'Awarded for developing a groundbreaking mentorship framework.',
-        },
-        {
-          icon: <Briefcase className="h-6 w-6 text-blue-400" />,
-          title: '100+ Mentees',
-          description:
-            'Guided over 100 young professionals to achieve their career goals.',
-        },
-        {
-          icon: <TrendingUp className="h-6 w-6 text-green-400" />,
-          title: 'Industry Speaker',
-          description:
-            'Frequent speaker at major tech and career development conferences.',
-        },
-      ],
-      projects: [
-        {
-          title: 'Project MentorMatch',
-          description: 'An algorithm to match mentees with the most suitable mentors.',
-          link: '#',
-          image: 'https://picsum.photos/seed/204/300/200'
-        },
-        {
-          title: 'SkillGap Analyzer',
-          description: 'A tool for identifying and bridging skill gaps for career advancement.',
-          link: '#',
-          image: 'https://picsum.photos/seed/205/300/200'
-        },
-        {
-          title: 'Tech-Interview PrepKit',
-          description: 'A comprehensive resource hub for technical interview preparation.',
-          image: 'https://picsum.photos/seed/206/300/200'
-        },
-      ],
-    },
-  ];
+  {
+    name: 'Pragati Khare',
+    role: 'Director at Fidelity International',
+    credentials: 'Mentor at ApplyEase',
+    experience: '18+ years',
+    image: 'https://picsum.photos/seed/pragati/100/100',
+    fallback: 'PK',
+    email: 'pragati.khare@applyease.com',
+    linkedin: 'https://www.linkedin.com/in/pragatic',
+    bio: 'With over 18 years of invaluable experience in the financial services industry, Ms. Khare brings seasoned insight and strategic depth that will significantly enhance how students approach and optimize their entire outreach process. Her guidance will play a vital role in shaping smarter, more impactful journeys for our students.',
+    companies: ['Fidelity International', 'Financial Services Leadership'],
+  },
+  {
+    name: 'Aviral Bhadauria',
+    role: 'Incoming at Ditto Insurance',
+    credentials: 'Outreach Mentor at ApplyEase',
+    image: 'https://picsum.photos/seed/aviral/100/100',
+    fallback: 'AB',
+    email: 'aviral.bhadauria@applyease.com',
+    linkedin: 'https://www.linkedin.com/in/aviralb',
+    bio: "Aviral Bhadauria has dived deep into the tech and systems space—interning at Motorola Solutions, Current Noodles and Snacks and Vayut Aeronautics. Now heading to Ditto by Finshot, he's bringing real-world experience and a sharp tech-business understanding. Having cracked multiple high-growth roles himself, Aviral is now helping fellow aspirants streamline their approach to internships and career building.",
+    companies: ['Ditto Insurance', 'Motorola Solutions', 'Current Noodles and Snacks', 'Vayut Aeronautics'],
+  },
+  {
+    name: 'Arya Kumari',
+    role: 'Incoming at Tata Group (IHCL)',
+    credentials: 'Outreach Mentor at ApplyEase',
+    image: 'https://picsum.photos/seed/arya/100/100',
+    fallback: 'AK',
+    email: 'arya.kumari@applyease.com',
+    linkedin: 'https://www.linkedin.com/in/aryakumari',
+    bio: 'From Britannia Industries Limited and Frost & Sullivan to the Office of the Delhi University Vice Chancellor, Arya has taken on diverse roles in research, strategy, and operations. Now joining Tata IHCL, she brings a unique blend of precision, adaptability, and drive. Having navigated multiple selections herself, Arya is now empowering others to refine their application journeys and break into competitive internships.',
+    companies: ['Tata IHCL', 'Britannia Industries Limited', 'Frost & Sullivan', 'Delhi University Vice Chancellor Office'],
+  },
+  {
+    name: 'Vijay Prakash',
+    role: 'Incoming Intern at Nation with NaMo',
+    credentials: 'Outreach Mentor at ApplyEase',
+    image: 'https://picsum.photos/seed/vijay/100/100',
+    fallback: 'VP',
+    email: 'vijay.prakash@applyease.com',
+    linkedin: 'https://www.linkedin.com/in/vijayprakash',
+    bio: "Vijay Prakash's internship journey spans across top institutions—from Piramal Finance and State Bank of India to consulting stints at Grant Thornton Bharat LLP, Teach For India, and the Rajiv Gandhi Cancer Institute and Research Centre. Having walked the path himself, Vijay is now helping to optimize internship strategies and navigate competitive selections with confidence.",
+    companies: ['Nation with NaMo', 'Piramal Finance', 'State Bank of India', 'Grant Thornton Bharat LLP', 'Teach For India', 'Rajiv Gandhi Cancer Institute'],
+  },
+  {
+    name: 'Ishan Ranjan',
+    role: 'Outreach Supervisor at ApplyEase',
+    credentials: 'Senior outreach supervisor and strategy guide',
+    image: 'https://picsum.photos/seed/ishan/100/100',
+    fallback: 'IR',
+    email: 'ishan.ranjan@applyease.com',
+    linkedin: 'https://www.linkedin.com/in/ishanranjan',
+    bio: "From ITC Limited to Equirus (Investment Banking), from HDFC Bank Capital to Bajaj Allianz General Insurance, Ishan has cracked some of the most sought-after internships across domains. Now serving as the Outreach Supervisor at ApplyEase, he's combining his industry exposure with a drive to support others. Having walked the path himself, Ishan is now helping peers optimize their internship strategies and navigate competitive selections with confidence.",
+    companies: ['ITC Limited', 'Equirus (Investment Banking)', 'HDFC Bank Capital', 'Bajaj Allianz General Insurance'],
+  },
+  {
+    name: 'Priyansh Sinha',
+    role: 'Incoming at Nation with NaMo',
+    credentials: 'Outreach Mentor at ApplyEase',
+    image: 'https://picsum.photos/seed/priyansh/100/100',
+    fallback: 'PS',
+    email: 'priyansh.sinha@applyease.com',
+    linkedin: 'https://www.linkedin.com/in/priyanshsinha',
+    bio: "With stints at ICICI Bank, Protiviti, Drishti IAS, Veetaday Industries, Priyansh Sinha has consistently demonstrated clarity of thought and execution. Now joining Nation with NaMo, he's poised to bridge consulting, finance, and policy. Priyansh now uses his experience to assist others in optimising the outreach process—helping them navigate the internship maze with structure, focus, and actionable insights.",
+    companies: ['Nation with NaMo', 'ICICI Bank', 'Protiviti', 'Drishti IAS', 'Veetaday Industries'],
+  },
+];
+
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -304,13 +270,13 @@ export default function Home() {
                 Authenticity and Credibility You Can Trust
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We are a team of dedicated professionals from top institutions like SRCC, IIT, and Esteem organizations, all passionate about helping you achieve your career goals. Our focus is on building trust through transparent, high-quality services.
+                We are a team of dedicated professionals from top institutions like SRCC, IIT, and Esteem organizations, passionate about helping you achieve your career goals. Our focus is on building trust through transparent, high-quality services.
               </p>
-              <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {teamMembers.map((member, index) => (
                   <Dialog key={index}>
                     <DialogTrigger asChild>
-                      <button className="flex items-center gap-4 text-left hover:bg-muted/50 p-2 rounded-lg transition-colors">
+                      <button className="flex items-center gap-4 text-left hover:bg-muted/50 p-3 rounded-lg transition-colors w-full">
                         <Avatar className="h-16 w-16">
                           <AvatarImage src={member.image} alt={member.name} />
                           <AvatarFallback>{member.fallback}</AvatarFallback>
@@ -318,15 +284,15 @@ export default function Home() {
                         <div>
                           <h3 className="text-lg font-bold">{member.name}</h3>
                           <p className="text-sm text-muted-foreground">
-                            {member.role} -{' '}
-                            <span className="font-semibold text-primary">
-                              {member.credentials}
-                            </span>
+                            {member.role}
                           </p>
+                           <p className="text-sm font-semibold text-primary">
+                              {member.credentials}
+                            </p>
                         </div>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-6xl bg-background text-foreground border-border p-0">
+                    <DialogContent className="sm:max-w-4xl bg-background text-foreground border-border p-0">
                       <DialogHeader className="p-6 pb-0">
                         <div className="flex items-start gap-6">
                           <Avatar className="h-24 w-24 border-4 border-primary">
@@ -341,8 +307,8 @@ export default function Home() {
                               {member.name}
                             </DialogTitle>
                             <DialogDescription className="text-lg text-muted-foreground mt-1">
-                              {member.role} -{' '}
-                              <span className="font-semibold text-primary">
+                              {member.role}
+                              <span className="block font-semibold text-primary">
                                 {member.credentials}
                               </span>
                             </DialogDescription>
@@ -359,98 +325,21 @@ export default function Home() {
                           </p>
                         </div>
 
-                        <div>
-                          <h4 className="font-semibold text-xl mb-4">
-                            Achievements
-                          </h4>
-                          <Carousel
-                            opts={{
-                              align: 'start',
-                            }}
-                            className="w-full"
-                          >
-                            <CarouselContent>
-                              {member.achievements.map((achievement, i) => (
-                                <CarouselItem
-                                  key={i}
-                                  className="md:basis-1/2 lg:basis-1/2"
-                                >
-                                  <div className="p-1 h-full">
-                                    <Card className="flex flex-col h-full bg-muted/50">
-                                      <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-                                        {achievement.icon}
-                                        <CardTitle className="text-md font-medium">
-                                          {achievement.title}
-                                        </CardTitle>
-                                      </CardHeader>
-                                      <CardContent>
-                                        <p className="text-xs text-muted-foreground">
-                                          {achievement.description}
-                                        </p>
-                                      </CardContent>
-                                    </Card>
-                                  </div>
-                                </CarouselItem>
+                        {member.companies && member.companies.length > 0 && (
+                          <div>
+                            <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
+                              <Building className="h-5 w-5 text-primary" />
+                              Company Experience
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                              {member.companies.map((company, i) => (
+                                <Badge key={i} variant="secondary">
+                                  {company}
+                                </Badge>
                               ))}
-                            </CarouselContent>
-                            <CarouselPrevious className="ml-12" />
-                            <CarouselNext className="mr-12" />
-                          </Carousel>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-semibold text-xl mb-4">
-                            Projects
-                          </h4>
-                          <Carousel
-                            opts={{
-                              align: 'start',
-                            }}
-                            className="w-full"
-                          >
-                            <CarouselContent>
-                              {member.projects.map((project, i) => (
-                                <CarouselItem
-                                  key={i}
-                                  className="md:basis-1/2 lg:basis-1/2"
-                                >
-                                  <div className="p-1 h-full">
-                                    <Card className="flex flex-col h-full bg-muted/50 overflow-hidden">
-                                      <div className="relative h-40 w-full">
-                                        <Image src={project.image} alt={project.title} fill className="object-cover" />
-                                      </div>
-                                      <CardHeader>
-                                        <CardTitle className="text-md font-medium">
-                                          {project.title}
-                                        </CardTitle>
-                                      </CardHeader>
-                                      <CardContent className='flex-grow'>
-                                        <p className="text-xs text-muted-foreground">
-                                          {project.description}
-                                        </p>
-                                      </CardContent>
-                                      {project.link && (
-                                        <CardFooter className="pt-4">
-                                          <Button asChild size='sm' variant='outline' className="w-full">
-                                            <a
-                                              href={project.link}
-                                              target="_blank"
-                                              rel="noopener noreferrer"
-                                            >
-                                              View Project <ExternalLink className="ml-2 h-4 w-4"/>
-                                            </a>
-                                          </Button>
-                                        </CardFooter>
-                                      )}
-                                    </Card>
-                                  </div>
-                                </CarouselItem>
-                              ))}
-                            </CarouselContent>
-                            <CarouselPrevious className="ml-12" />
-                            <CarouselNext className="mr-12" />
-                          </Carousel>
-                        </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
                       <div className="flex justify-between items-center bg-muted/50 p-4 mt-auto">
                         <p className="text-sm text-muted-foreground">
