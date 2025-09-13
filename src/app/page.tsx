@@ -264,123 +264,125 @@ export default function Home() {
           id="about"
           className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32"
         >
-          <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-            <div className="space-y-4">
+          <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:gap-10">
+            <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Authenticity and Credibility You Can Trust
               </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 We are a team of dedicated professionals from top institutions like SRCC, IIT, and Esteem organizations, passionate about helping you achieve your career goals. Our focus is on building trust through transparent, high-quality services.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {teamMembers.map((member, index) => (
-                  <Dialog key={index}>
-                    <DialogTrigger asChild>
-                      <button className="flex items-center gap-4 text-left hover:bg-muted/50 p-3 rounded-lg transition-colors w-full">
-                        <Avatar className="h-16 w-16">
-                          <AvatarImage src={member.image} alt={member.name} />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {teamMembers.map((member, index) => (
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <button className="flex items-center gap-4 text-left hover:bg-muted/50 p-3 rounded-lg transition-colors w-full">
+                      <Avatar className="h-16 w-16">
+                        <AvatarImage src={member.image} alt={member.name} />
+                        <AvatarFallback>{member.fallback}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="text-lg font-bold">{member.name}</h3>
+                        <p className="text-sm text-muted-foreground">
+                          {member.role}
+                        </p>
+                         <p className="text-sm font-semibold text-primary">
+                            {member.credentials}
+                          </p>
+                      </div>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-4xl bg-background text-foreground border-border p-0">
+                    <DialogHeader className="p-6 pb-0">
+                      <div className="flex items-start gap-6">
+                        <Avatar className="h-24 w-24 border-4 border-primary">
+                          <AvatarImage
+                            src={member.image}
+                            alt={member.name}
+                          />
                           <AvatarFallback>{member.fallback}</AvatarFallback>
                         </Avatar>
-                        <div>
-                          <h3 className="text-lg font-bold">{member.name}</h3>
-                          <p className="text-sm text-muted-foreground">
+                        <div className="pt-2">
+                          <DialogTitle className="text-3xl font-bold">
+                            {member.name}
+                          </DialogTitle>
+                          <DialogDescription className="text-lg text-muted-foreground mt-1">
                             {member.role}
-                          </p>
-                           <p className="text-sm font-semibold text-primary">
+                            <span className="block font-semibold text-primary">
                               {member.credentials}
-                            </p>
+                            </span>
+                          </DialogDescription>
                         </div>
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="sm:max-w-4xl bg-background text-foreground border-border p-0">
-                      <DialogHeader className="p-6 pb-0">
-                        <div className="flex items-start gap-6">
-                          <Avatar className="h-24 w-24 border-4 border-primary">
-                            <AvatarImage
-                              src={member.image}
-                              alt={member.name}
-                            />
-                            <AvatarFallback>{member.fallback}</AvatarFallback>
-                          </Avatar>
-                          <div className="pt-2">
-                            <DialogTitle className="text-3xl font-bold">
-                              {member.name}
-                            </DialogTitle>
-                            <DialogDescription className="text-lg text-muted-foreground mt-1">
-                              {member.role}
-                              <span className="block font-semibold text-primary">
-                                {member.credentials}
-                              </span>
-                            </DialogDescription>
-                          </div>
-                        </div>
-                      </DialogHeader>
-                      <div className="px-6 py-4 space-y-6 max-h-[60vh] overflow-y-auto">
-                        <div>
-                          <h4 className="font-semibold text-xl mb-2">
-                            About
-                          </h4>
-                          <p className="text-muted-foreground">
-                            {member.bio}
-                          </p>
-                        </div>
-
-                        {member.companies && member.companies.length > 0 && (
-                          <div>
-                            <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
-                              <Building className="h-5 w-5 text-primary" />
-                              Company Experience
-                            </h4>
-                            <div className="flex flex-wrap gap-2">
-                              {member.companies.map((company, i) => (
-                                <Badge key={i} variant="secondary">
-                                  {company}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                        )}
                       </div>
-                      <div className="flex justify-between items-center bg-muted/50 p-4 mt-auto">
-                        <p className="text-sm text-muted-foreground">
-                          Connect with {member.name.split(' ')[0]}
+                    </DialogHeader>
+                    <div className="px-6 py-4 space-y-6 max-h-[60vh] overflow-y-auto">
+                      <div>
+                        <h4 className="font-semibold text-xl mb-2">
+                          About
+                        </h4>
+                        <p className="text-muted-foreground">
+                          {member.bio}
                         </p>
-                        <div className="flex justify-end gap-4">
-                          <a
-                            href={`mailto:${member.email}`}
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            <Mail className="h-6 w-6" />
-                            <span className="sr-only">Email</span>
-                          </a>
-                          <a
-                            href={member.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            <Linkedin className="h-6 w-6" />
-                            <span className="sr-only">LinkedIn</span>
-                          </a>
-                        </div>
                       </div>
-                      <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-                        <X className="h-4 w-4" />
-                        <span className="sr-only">Close</span>
-                      </DialogClose>
-                    </DialogContent>
-                  </Dialog>
-                ))}
-              </div>
+
+                      {member.companies && member.companies.length > 0 && (
+                        <div>
+                          <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
+                            <Building className="h-5 w-5 text-primary" />
+                            Company Experience
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {member.companies.map((company, i) => (
+                              <Badge key={i} variant="secondary">
+                                {company}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex justify-between items-center bg-muted/50 p-4 mt-auto">
+                      <p className="text-sm text-muted-foreground">
+                        Connect with {member.name.split(' ')[0]}
+                      </p>
+                      <div className="flex justify-end gap-4">
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <Mail className="h-6 w-6" />
+                          <span className="sr-only">Email</span>
+                        </a>
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <Linkedin className="h-6 w-6" />
+                          <span className="sr-only">LinkedIn</span>
+                        </a>
+                      </div>
+                    </div>
+                    <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                      <X className="h-4 w-4" />
+                      <span className="sr-only">Close</span>
+                    </DialogClose>
+                  </DialogContent>
+                </Dialog>
+              ))}
             </div>
-            <Image
-              src="https://picsum.photos/seed/103/600/500"
-              data-ai-hint="team collaboration"
-              width={600}
-              height={500}
-              alt="Our Team"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            <div className="mt-8 flex justify-center">
+              <Image
+                src="https://picsum.photos/seed/103/800/400"
+                data-ai-hint="team collaboration"
+                width={800}
+                height={400}
+                alt="Our Team"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+              />
+            </div>
           </div>
         </section>
 
