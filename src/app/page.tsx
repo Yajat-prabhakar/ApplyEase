@@ -57,7 +57,7 @@ export default function Home() {
       title: 'CV Creation Service',
       price: '₹1500',
       description:
-        'Professional CV crafted by experts from SRCC, IIT, and esteem organizations. Scrutinized for quality to make you stand out.',
+        'Professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
       link: 'https://tally.so/r/wAkvEN',
     },
     {
@@ -305,7 +305,7 @@ export default function Home() {
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 We are a team of dedicated professionals from top institutions
-                like SRCC, IIT, and esteem organizations, passionate about
+                like SRCC, IIT, and Esteem organizations, passionate about
                 helping you achieve your career goals. Our focus is on building
                 trust through transparent, high-quality services.
               </p>
