@@ -1,3 +1,4 @@
+
 'use server';
 
 export interface Testimonial {
@@ -13,12 +14,12 @@ export interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      'Momentum Careers helped me restructure my CV and I landed a job at my dream company within a month!',
+      'Apply Ease helped me restructure my CV and I landed a job at my dream company within a month!',
     name: 'Priya S.',
     title: 'Software Engineer',
     avatar: 'PS',
     rating: 5,
-    bio: 'I am a dedicated software engineer with a passion for creating innovative solutions. After struggling to get noticed by top tech companies, I turned to Momentum Careers to revamp my professional brand.',
+    bio: 'I am a dedicated software engineer with a passion for creating innovative solutions. After struggling to get noticed by top tech companies, I turned to Apply Ease to revamp my professional brand.',
     service: 'CV Creation Service',
   },
   {
@@ -65,3 +66,5 @@ export const getTestimonials = async (): Promise<Testimonial[]> => {
   
   return testimonials;
 };
+
+    

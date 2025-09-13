@@ -55,15 +55,15 @@ export default function Home() {
     {
       icon: <FileText className="h-10 w-10 text-primary" />,
       title: 'CV Creation Service',
-      price: '₹999',
+      price: '₹1500',
       description:
-        'Professional CV crafted by experts from SRCC, IIT, and STEAM organizations. Scrutinized for quality to make you stand out.',
+        'Professional CV crafted by experts from SRCC, IIT, and esteem organizations. Scrutinized for quality to make you stand out.',
       link: 'https://tally.so/r/wAkvEN',
     },
     {
       icon: <Send className="h-10 w-10 text-primary" />,
       title: 'Outreach Service',
-      price: '₹499',
+      price: '₹999',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
       link: 'https://tally.so/r/wAkvEN',
@@ -71,7 +71,7 @@ export default function Home() {
     {
       icon: <Users className="h-10 w-10 text-primary" />,
       title: 'Mentorship Service',
-      price: '₹1,999',
+      price: '₹499',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
       link: 'https://tally.so/r/wAkvEN',
@@ -103,7 +103,7 @@ export default function Home() {
       credentials: 'SRCC Alumna',
       image: 'https://picsum.photos/seed/101/100/100',
       fallback: 'AK',
-      email: 'aisha.khan@momentumcareers.com',
+      email: 'aisha.khan@applyease.com',
       linkedin: 'https://www.linkedin.com/in/aishakhan',
       bio: 'Aisha is a passionate career strategist with a decade of experience helping professionals achieve their dream careers. A proud SRCC alumna, she specializes in crafting compelling narratives that make candidates stand out in a competitive job market.',
       achievements: [
@@ -153,7 +153,7 @@ export default function Home() {
       credentials: 'IIT Delhi Graduate',
       image: 'https://picsum.photos/seed/102/100/100',
       fallback: 'VS',
-      email: 'vikram.singh@momentumcareers.com',
+      email: 'vikram.singh@applyease.com',
       linkedin: 'https://www.linkedin.com/in/vikramsingh',
       bio: 'Vikram is an IIT Delhi graduate and a seasoned industry expert with a passion for mentoring the next generation of leaders. He provides invaluable guidance on career growth, interview preparation, and skill development, helping mentees navigate their professional journey with confidence.',
       achievements: [
@@ -305,7 +305,7 @@ export default function Home() {
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 We are a team of dedicated professionals from top institutions
-                like SRCC, IIT, and STEAM organizations, passionate about
+                like SRCC, IIT, and esteem organizations, passionate about
                 helping you achieve your career goals. Our focus is on building
                 trust through transparent, high-quality services.
               </p>
@@ -699,7 +699,7 @@ export default function Home() {
         >
           <div className="container mx-auto max-w-3xl px-4 md:px-6">
             <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              <h2 className="text-3xl font-bold tracking-tighter smt:ext-5xl">
                 Have a Question?
               </h2>
               <p className="text-muted-foreground md:text-xl">
@@ -725,3 +725,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
