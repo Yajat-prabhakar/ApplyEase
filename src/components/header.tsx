@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Briefcase } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-          <Briefcase className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold">Apply Ease</span>
+          <Image src="https://i.ibb.co/h1VDV6Z6/ss2.png" alt="Apply Ease Logo" width={120} height={40} className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-6">
