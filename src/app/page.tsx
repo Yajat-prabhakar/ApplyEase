@@ -272,7 +272,7 @@ export default function Home() {
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 We are a team of dedicated professionals from top institutions like SRCC, IIT, and Esteem organizations, passionate about helping you achieve your career goals. Our focus is on building trust through transparent, high-quality services.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {teamMembers.map((member, index) => (
                   <Dialog key={index}>
                     <DialogTrigger asChild>
