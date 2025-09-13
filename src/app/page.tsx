@@ -54,7 +54,7 @@ export default function Home() {
       title: 'CV Creation Service',
       price: '₹1500',
       description:
-        'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations, which is scrutinized for quality to make you stand out.',
+        'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
       link: 'https://tally.so/r/wAkvEN',
     },
     {
@@ -102,7 +102,7 @@ export default function Home() {
     image: 'https://picsum.photos/seed/pragati/100/100',
     fallback: 'PK',
     email: 'pragati.khare@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/pragatic',
+    linkedin: 'https://www.linkedin.com/in/pragati-khare-a116a232/',
     bio: 'With over 18 years of invaluable experience in the financial services industry, Ms. Khare brings seasoned insight and strategic depth that will significantly enhance how students approach and optimize their entire outreach process. Her guidance will play a vital role in shaping smarter, more impactful journeys for our students.',
     companies: ['Fidelity International', 'Financial Services Leadership'],
   },
@@ -113,7 +113,7 @@ export default function Home() {
     image: 'https://picsum.photos/seed/aviral/100/100',
     fallback: 'AB',
     email: 'aviral.bhadauria@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/aviralb',
+    linkedin: 'https://www.linkedin.com/in/aviral-bhadauria/',
     bio: "Aviral Bhadauria has dived deep into the tech and systems space—interning at Motorola Solutions, Current Noodles and Snacks and Vayut Aeronautics. Now heading to Ditto by Finshot, he's bringing real-world experience and a sharp tech-business understanding. Having cracked multiple high-growth roles himself, Aviral is now helping fellow aspirants streamline their approach to internships and career building.",
     companies: ['Ditto Insurance', 'Motorola Solutions', 'Current Noodles and Snacks', 'Vayut Aeronautics'],
   },
@@ -124,7 +124,7 @@ export default function Home() {
     image: 'https://picsum.photos/seed/arya/100/100',
     fallback: 'AK',
     email: 'arya.kumari@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/aryakumari',
+    linkedin: 'https://www.linkedin.com/in/arya-kumari-a959a0283/',
     bio: 'From Britannia Industries Limited and Frost & Sullivan to the Office of the Delhi University Vice Chancellor, Arya has taken on diverse roles in research, strategy, and operations. Now joining Tata IHCL, she brings a unique blend of precision, adaptability, and drive. Having navigated multiple selections herself, Arya is now empowering others to refine their application journeys and break into competitive internships.',
     companies: ['Tata IHCL', 'Britannia Industries Limited', 'Frost & Sullivan', 'Delhi University Vice Chancellor Office'],
   },
@@ -135,7 +135,7 @@ export default function Home() {
     image: 'https://picsum.photos/seed/vijay/100/100',
     fallback: 'VP',
     email: 'vijay.prakash@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/vijayprakash',
+    linkedin: 'https://www.linkedin.com/in/vijay-prakash-b44a00287/',
     bio: "Vijay Prakash's internship journey spans across top institutions—from Piramal Finance and State Bank of India to consulting stints at Grant Thornton Bharat LLP, Teach For India, and the Rajiv Gandhi Cancer Institute and Research Centre. Having walked the path himself, Vijay is now helping to optimize internship strategies and navigate competitive selections with confidence.",
     companies: ['Nation with NaMo', 'Piramal Finance', 'State Bank of India', 'Grant Thornton Bharat LLP', 'Teach For India', 'Rajiv Gandhi Cancer Institute'],
   },
@@ -146,7 +146,7 @@ export default function Home() {
     image: 'https://picsum.photos/seed/ishan/100/100',
     fallback: 'IR',
     email: 'ishan.ranjan@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/ishanranjan',
+    linkedin: 'https://www.linkedin.com/in/ishanranjan13/',
     bio: "From ITC Limited to Equirus (Investment Banking), from HDFC Bank Capital to Bajaj Allianz General Insurance, Ishan has cracked some of the most sought-after internships across domains. Now serving as the Outreach Supervisor at ApplyEase, he's combining his industry exposure with a drive to support others. Having walked the path himself, Ishan is now helping peers optimize their internship strategies and navigate competitive selections with confidence.",
     companies: ['ITC Limited', 'Equirus (Investment Banking)', 'HDFC Bank Capital', 'Bajaj Allianz General Insurance'],
   },
@@ -157,7 +157,7 @@ export default function Home() {
     image: 'https://picsum.photos/seed/priyansh/100/100',
     fallback: 'PS',
     email: 'priyansh.sinha@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/priyanshsinha',
+    linkedin: 'https://www.linkedin.com/in/priyansh-sinha-548157247/',
     bio: "With stints at ICICI Bank, Protiviti, Drishti IAS, Veetaday Industries, Priyansh Sinha has consistently demonstrated clarity of thought and execution. Now joining Nation with NaMo, he's poised to bridge consulting, finance, and policy. Priyansh now uses his experience to assist others in optimising the outreach process—helping them navigate the internship maze with structure, focus, and actionable insights.",
     companies: ['Nation with NaMo', 'ICICI Bank', 'Protiviti', 'Drishti IAS', 'Veetaday Industries'],
   },
@@ -613,5 +613,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
