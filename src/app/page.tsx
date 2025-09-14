@@ -55,7 +55,7 @@ export default function Home() {
       price: '₹1500',
       description:
         'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
-      link: 'https://tally.so/r/wAkvEN',
+      link: 'https://tally.so/r/mROg2P',
     },
     {
       icon: <Send className="h-10 w-10 text-primary" />,
@@ -63,7 +63,7 @@ export default function Home() {
       price: '₹999',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
-      link: 'https://tally.so/r/wAkvEN',
+      link: 'https://tally.so/r/mROg2P',
     },
     {
       icon: <Users className="h-10 w-10 text-primary" />,
@@ -71,7 +71,7 @@ export default function Home() {
       price: '₹499',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
-      link: 'https://tally.so/r/wAkvEN',
+      link: 'https://tally.so/r/mROg2P',
     },
   ];
 
@@ -104,7 +104,7 @@ export default function Home() {
     email: 'pragati.khare@applyease.com',
     linkedin: 'https://www.linkedin.com/in/pragati-khare-a116a232/',
     bio: 'With over 18 years of invaluable experience in the financial services industry, Ms. Khare brings seasoned insight and strategic depth that will significantly enhance how students approach and optimize their entire outreach process. Her guidance will play a vital role in shaping smarter, more impactful journeys for our students.',
-    companies: [{ name: 'Fidelity International', logo: 'https://i.ibb.co/kV9KyxPK/Fidelity-International.png' }, { name: 'Financial Services Leadership' }],
+    companies: [{ name: 'Fidelity International', logo: 'https://i.ibb.co/kV9KyxPK/Fidelity-International.png' }],
   },
   {
     name: 'Aviral Bhadauria',
@@ -135,7 +135,6 @@ export default function Home() {
       { name: 'Tata IHCL', logo: 'https://i.ibb.co/zWmTdPKf/Tata-Group-IHCL.webp' },
       { name: 'Britannia Industries Limited', logo: 'https://i.ibb.co/zWdxdDnY/Britannia-Industries-Limited.jpg' },
       { name: 'Frost & Sullivan', logo: 'https://i.ibb.co/RkRNwzv5/Frost-Sullivan.jpg' },
-      { name: 'Delhi University Vice Chancellor Office' }
     ],
   },
   {
@@ -621,7 +620,7 @@ export default function Home() {
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
                 <a
-                  href="https://tally.so/r/mORBgY"
+                  href="https://tally.so/r/mVrdX6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -650,7 +649,7 @@ export default function Home() {
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
                 <a
-                  href="https://tally.so/r/n046r9"
+                  href="https://tally.so/r/wM0gZl"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
