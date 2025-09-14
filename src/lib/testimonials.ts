@@ -8,63 +8,95 @@ export interface Testimonial {
   avatar: string;
   rating: number;
   bio: string;
-  service: string;
+  linkedin: string;
+  companiesSecured: string[];
 }
 
 const testimonials: Testimonial[] = [
   {
     quote:
-      'Apply Ease helped me restructure my CV and I landed a job at my dream company within a month!',
-    name: 'Priya S.',
-    title: 'Software Engineer',
-    avatar: 'PS',
+      'The experience with Apply Ease was effortless. They managed every detail with precision and care, so I could focus on my priorities. I landed the opportunity without any stress, all thanks to their seamless service!',
+    name: 'Keshav Mittal',
+    title: 'Student at SRCC',
+    avatar: 'KM',
     rating: 5,
-    bio: 'I am a dedicated software engineer with a passion for creating innovative solutions. After struggling to get noticed by top tech companies, I turned to Apply Ease to revamp my professional brand.',
-    service: 'CV Creation Service',
+    bio: 'I am Keshav Mittal. A person living only because of his dreams. Hobbies include playing Chess, sports and spending time alone. A passionate for Finance and Accountancy. A desire to improve myself better than last day. A constant eagerness for learning and growth.',
+    linkedin: 'https://www.linkedin.com/in/keshav-mittal-0719b4286/',
+    companiesSecured: [
+      'Primus Partners Pvt Ltd (Public Policy and Research Intern)',
+      'Benori (Market Research and Data Analytics)',
+    ],
   },
   {
     quote:
-      'The mentorship program is invaluable. My mentor provided guidance that helped me navigate a career transition successfully.',
-    name: 'Rohan M.',
-    title: 'Product Manager',
-    avatar: 'RM',
-    rating: 5,
-    bio: 'I was looking to transition from a technical role to product management. The mentorship program provided me with the strategic guidance and industry insights I needed to make the leap confidently.',
-    service: 'Mentorship Service',
-  },
-  {
-    quote:
-      "The outreach service saved me so much time and effort. I got interviews I wouldn't have been able to secure on my own.",
-    name: 'Anika J.',
-    title: 'Data Analyst',
-    avatar: 'AJ',
+      'Apply Ease is a game-changer. Their team took full ownership of the process, ensuring everything was handled perfectly and on time. I just focused on my work while they made the opportunity happen for me. Simply outstanding!',
+    name: 'Pratik Kumar',
+    title: 'Student at SRCC',
+    avatar: 'PK',
     rating: 4,
-    bio: 'As a skilled data analyst, I knew my worth but found it challenging to get my foot in the door at leading firms. The outreach service connected me with the right people, fast-tracking my job search.',
-    service: 'Outreach Service',
+    bio: "I have gained hands-on experience through an internship at Shadowfax, where I optimized logistics, inventory management, and workforce scheduling to improve productivity. At CDF-SRCC, I led ventures such as Rivaayat, which boosted 32 artisans' income by 115% through partnerships with Bain & Co., Vodafone, and ITC; Naqsh, an upcycling initiative that generated ₹1,00,000 revenue with ~30% margin in four months; and Arpan, a sustainable incense business scaled with 40% projected revenue growth and a supply chain expansion to 15 manufacturers. These experiences have sharpened my skills in business strategy, operations, and entrepreneurship, enabling me to drive measurable growth and impact.",
+    linkedin: 'https://www.linkedin.com/in/pratik-kumar-0b2487220/',
+    companiesSecured: ['SBI (State Bank of India)', 'Zomato', 'Protiviti Consulting'],
   },
   {
     quote:
-      "The team's expertise is top-notch. They transformed my resume and my confidence.",
-    name: 'Sameer K.',
-    title: 'Marketing Specialist',
-    avatar: 'SK',
+      "Apply Ease took away all the hassle. Their expertise, dedication, and hands-on approach meant I could relax knowing I was in good hands. The opportunity came through smoothly and on schedule – couldn't have asked for more!",
+    name: 'Vijay Prakash',
+    title: 'Business Analyst at Picapool',
+    avatar: 'VP',
     rating: 5,
-    bio: 'I had a strong marketing background but my resume wasn’t reflecting my true potential. The CV creation service helped me craft a compelling narrative that immediately caught the attention of recruiters.',
-    service: 'CV Creation Service',
+    bio: "As a Business Analyst at Picapool, I apply my expertise in accounting and corporate law to deliver data-driven insights and strategic recommendations that support business growth. Alongside my role, I am pursuing the CA Intermediate certification and have completed the Do Well Do Good Future Leaders Program, as well as certifications from NISM (Research Analyst) and SEBI (Investor Certificate). These experiences have strengthened my ability to combine financial analysis, legal understanding, and strategic thinking to drive value for the organization and its stakeholders.",
+    linkedin: 'https://www.linkedin.com/in/vijay-prakash-b44a00287/',
+    companiesSecured: ['Acuvon Consulting (Project Intern)', 'Piramal Finance', 'SBI (State Bank of India)'],
+  },
+  {
+    quote:
+      'Apply Ease made everything so simple for me. I just sat back and relaxed while their expert team handled every step of the process. Thanks to them, I landed the opportunity effortlessly. Highly recommended for anyone seeking a stress-free experience!',
+    name: 'Vidisha Shree',
+    title: 'Student at SRCC',
+    avatar: 'VS',
+    rating: 5,
+    bio: "As a B.Com (Hons.) student at SRCC and CA Foundation qualifier, I bring a blend of analytical and strategic skills through experiences at Unilever, where I gained exposure to global operations, and at The Electric Eel Founder's Office, where I worked closely on business growth initiatives. My role at TEDxSRCC further strengthened my leadership, organizational, and stakeholder management abilities. These experiences have shaped my interest in finance, strategy, and business operations, and I am keen to apply my skills to drive impactful solutions in dynamic environments.",
+    linkedin: 'https://www.linkedin.com/in/vidisha-shree-433a42298/',
+    companiesSecured: ['Primus Partners Pvt Ltd', 'SBI'],
+  },
+  {
+    quote:
+      "From start to finish, Apply Ease handled all the complexities without me having to worry about a thing. Their professionalism and attention to detail gave me complete confidence. I'm thrilled with the outcome and can't thank them enough!",
+    name: 'Alok Kumar',
+    title: 'Student at SRCC',
+    avatar: 'AK',
+    rating: 5,
+    bio: "I am a B.Com (Hons.) student at SRCC '26/27 with experience spanning consulting, growth strategy, and public policy. I have worked with organizations like Primus Partners, Frost & Sullivan, the Ministry of Commerce & Industry, and Picapool, where I contributed to business expansion, analytics, and strategic projects. Beyond internships, I serve as General Secretary at Delta SRCC and engage in initiatives such as Vittshala, NSS, and Changement Services, honing my leadership and problem-solving skills.",
+    linkedin: 'https://www.linkedin.com/in/alok-kumar-8063b8292/',
+    companiesSecured: [
+      'Primus Partners Pvt Ltd (Consulting Intern)',
+      'Bajaj Capital Ltd (Summer Intern)',
+      'Ministry of Commerce and Industry, Government of India (Internship)',
+    ],
+  },
+  {
+    quote:
+      'Apply Ease turned what seemed complicated into a simple, smooth experience. I just sat back while their team managed everything end-to-end. The result? A successful outcome without any of the usual stress. Highly trustworthy!',
+    name: 'Rishi Kumar Sinha',
+    title: "Student at SRCC",
+    avatar: 'RS',
+    rating: 4,
+    bio: "I am a B.Com (Hons.) student at SRCC '25 who enjoys turning complex financial data into clear strategies that improve efficiency and unlock growth. My journey spans roles at Shriram Finance, Bajaj Allianz, Vodafone Idea, SPA Capital, and 24x7 Security, where I worked on everything from building financial models and streamlining compliance processes to designing risk frameworks and supporting post-merger analysis. Alongside internships, I've actively contributed to SRCC's Debating Society and student leadership initiatives, which sharpened my ability to think critically and communicate persuasively. What drives me is the challenge of connecting numbers with strategy to create solutions that make organizations more agile, resilient, and future-ready.",
+    linkedin: 'https://www.linkedin.com/in/rishi-kumar-sinha-b92347230/',
+    companiesSecured: [
+      'Shriram Finance Limited (Finance Intern)',
+      'SPA Capital Services Ltd. (Project Consultant)',
+      'Bajaj Allianz General Insurance (Strategy Intern)',
+    ],
   },
 ];
+
 
 export const getTestimonials = async (): Promise<Testimonial[]> => {
   // Simulate a network delay
   await new Promise(resolve => setTimeout(resolve, 1000));
   
-  // In a real app, you would fetch this data from Supabase
-  // For example:
-  // const { data, error } = await supabase.from('testimonials').select('*');
-  // if (error) throw error;
-  // return data;
-  
+  // In a real app, you would fetch this data from a database
   return testimonials;
 };
-
-    

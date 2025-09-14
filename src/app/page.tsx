@@ -506,6 +506,17 @@ export default function Home() {
                               </div>
                             </DialogHeader>
                             <div className="px-6 py-4 space-y-6 max-h-[60vh] overflow-y-auto">
+                              <div className="flex justify-end">
+                                <a
+                                  href={testimonial.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                  <Linkedin className="h-6 w-6" />
+                                  <span className="sr-only">LinkedIn</span>
+                                </a>
+                              </div>
                               <div>
                                 <h4 className="font-semibold text-xl mb-2">
                                   About
@@ -519,11 +530,15 @@ export default function Home() {
                                 <div>
                                   <h4 className="font-semibold text-xl mb-2 flex items-center gap-2">
                                     <ShoppingBag className="h-5 w-5 text-primary" />
-                                    Service Used
+                                    Opportunities Secured
                                   </h4>
-                                  <p className="text-muted-foreground">
-                                    {testimonial.service}
-                                  </p>
+                                   <div className="flex flex-wrap gap-2">
+                                    {testimonial.companiesSecured.map((company, i) => (
+                                      <Badge key={i} variant="secondary">
+                                        {company}
+                                      </Badge>
+                                    ))}
+                                  </div>
                                 </div>
                                 <div>
                                   <h4 className="font-semibold text-xl mb-2 flex items-center gap-2">
