@@ -54,6 +54,7 @@ export default function Home() {
       icon: <FileText className="h-10 w-10 text-primary" />,
       title: 'CV Creation Service',
       price: '₹1999',
+      priceUsd: '$23.99',
       description:
         'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
       link: 'https://tally.so/r/mROg2P',
@@ -62,6 +63,7 @@ export default function Home() {
       icon: <Send className="h-10 w-10 text-primary" />,
       title: 'Outreach Service',
       price: '₹1499',
+      priceUsd: '$17.99',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
       link: 'https://tally.so/r/mROg2P',
@@ -70,6 +72,7 @@ export default function Home() {
       icon: <Users className="h-10 w-10 text-primary" />,
       title: 'Mentorship Service',
       price: '₹999',
+      priceUsd: '$11.99',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
       link: 'https://tally.so/r/mROg2P',
@@ -78,6 +81,7 @@ export default function Home() {
       icon: <Package className="h-10 w-10 text-primary" />,
       title: 'Complete Career Package',
       price: '₹2997',
+      priceUsd: '$35.99',
       description: 'Get all three services at discounted rates - save money while accelerating your career growth.',
       link: 'https://tally.so/r/mROg2P',
       isBundle: true,
@@ -257,9 +261,14 @@ export default function Home() {
                     {service.icon}
                     <CardTitle className="text-2xl text-center">{service.title}</CardTitle>
                      {!service.isBundle && (
-                        <p className="text-3xl font-bold text-primary">
-                          {service.price}
-                        </p>
+                        <div className="text-center">
+                          <p className="text-3xl font-bold text-primary">
+                            {service.price}
+                          </p>
+                           <p className="text-lg font-semibold text-muted-foreground">
+                            ({service.priceUsd})
+                          </p>
+                        </div>
                       )}
                   </CardHeader>
                   <CardContent className="flex-grow">
@@ -275,9 +284,15 @@ export default function Home() {
                             </div>
                           ))}
                         </div>
-                         <p className="text-center text-3xl font-bold text-primary mt-4">
-                          Total: {service.price}
-                        </p>
+                         <div className="text-center mt-6">
+                           <p className="text-sm text-muted-foreground">Total Value</p>
+                          <p className="text-4xl font-bold text-primary">
+                            {service.price}
+                          </p>
+                           <p className="text-xl font-semibold text-muted-foreground">
+                            ({service.priceUsd})
+                          </p>
+                        </div>
                       </div>
                     ) : (
                       <CardDescription className="text-center">
@@ -698,3 +713,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
