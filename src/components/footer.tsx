@@ -27,7 +27,7 @@ const Footer = () => {
             Feedback
           </Link>
           <Link href="#contact" className="text-sm hover:underline underline-offset-4">
-            Contact
+            Contact Us
           </Link>
         </nav>
       </div>
