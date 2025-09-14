@@ -149,7 +149,7 @@ export default function Home() {
     bio: "From ITC Limited to Equirus (Investment Banking), from HDFC Bank Capital to Bajaj Allianz General Insurance, Ishan has cracked some of the most sought-after internships across domains. Now serving as the Outreach Supervisor at ApplyEase, he's combining his industry exposure with a drive to support others. Having walked the path himself, Ishan is now helping peers optimize their internship strategies and navigate competitive selections with confidence.",
     companies: [
       { name: 'ITC Limited', logo: 'https://i.ibb.co/XZHLfVqN/ITC-Limited.png' },
-      { name: 'Equirus (Investment Banking)', logo: 'https://i.ibb.co/7TX3dVV/Equirus-Investment-Banking.png' },
+      { name: 'Equirus (Investment Banking)', logo: 'https://i.ibb.co/7TX3dVV/Equirus.png' },
       { name: 'HDFC Bank Capital', logo: 'https://i.ibb.co/9mv4ZPtM/HDFC-Bank-Capital.jpg' },
       { name: 'Bajaj Allianz General Insurance', logo: 'https://i.ibb.co/JRLHkQpr/Bajaj-Allianz-General-Insurance.png' }
     ],
