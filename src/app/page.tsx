@@ -104,7 +104,7 @@ export default function Home() {
     email: 'pragati.khare@applyease.com',
     linkedin: 'https://www.linkedin.com/in/pragati-khare-a116a232/',
     bio: 'With over 18 years of invaluable experience in the financial services industry, Ms. Khare brings seasoned insight and strategic depth that will significantly enhance how students approach and optimize their entire outreach process. Her guidance will play a vital role in shaping smarter, more impactful journeys for our students.',
-    companies: ['Fidelity International', 'Financial Services Leadership'],
+    companies: [{ name: 'Fidelity International', logo: 'https://i.ibb.co/kV9KyxPK/Fidelity-International.png' }, { name: 'Financial Services Leadership' }],
   },
   {
     name: 'Aviral Bhadauria',
@@ -115,7 +115,12 @@ export default function Home() {
     email: 'aviral.bhadauria@applyease.com',
     linkedin: 'https://www.linkedin.com/in/aviral-bhadauria/',
     bio: "Aviral Bhadauria has dived deep into the tech and systems space—interning at Motorola Solutions, Current Noodles and Snacks and Vayut Aeronautics. Now heading to Ditto by Finshot, he's bringing real-world experience and a sharp tech-business understanding. Having cracked multiple high-growth roles himself, Aviral is now helping fellow aspirants streamline their approach to internships and career building.",
-    companies: ['Ditto Insurance', 'Motorola Solutions', 'Current Noodles and Snacks', 'Vayut Aeronautics'],
+    companies: [
+      { name: 'Ditto Insurance', logo: 'https://i.ibb.co/4R0JsZD4/Ditto-Insurance.png' },
+      { name: 'Motorola Solutions', logo: 'https://i.ibb.co/zTLF8f9v/Motorola-Solutions.webp' },
+      { name: 'Current Noodles and Snacks', logo: 'https://i.ibb.co/zhFmq4bY/Current-Noodles-and-Snacks.png' },
+      { name: 'Vayut Aeronautics', logo: 'https://i.ibb.co/8gFjTswq/Vayut-Aeronautics.jpg' }
+    ],
   },
   {
     name: 'Arya Kumari',
@@ -126,7 +131,12 @@ export default function Home() {
     email: 'arya.kumari@applyease.com',
     linkedin: 'https://www.linkedin.com/in/arya-kumari-a959a0283/',
     bio: 'From Britannia Industries Limited and Frost & Sullivan to the Office of the Delhi University Vice Chancellor, Arya has taken on diverse roles in research, strategy, and operations. Now joining Tata IHCL, she brings a unique blend of precision, adaptability, and drive. Having navigated multiple selections herself, Arya is now empowering others to refine their application journeys and break into competitive internships.',
-    companies: ['Tata IHCL', 'Britannia Industries Limited', 'Frost & Sullivan', 'Delhi University Vice Chancellor Office'],
+    companies: [
+      { name: 'Tata IHCL', logo: 'https://i.ibb.co/zWmTdPKf/Tata-Group-IHCL.webp' },
+      { name: 'Britannia Industries Limited', logo: 'https://i.ibb.co/zWdxdDnY/Britannia-Industries-Limited.jpg' },
+      { name: 'Frost & Sullivan', logo: 'https://i.ibb.co/RkRNwzv5/Frost-Sullivan.jpg' },
+      { name: 'Delhi University Vice Chancellor Office' }
+    ],
   },
   {
     name: 'Vijay Prakash',
@@ -137,7 +147,14 @@ export default function Home() {
     email: 'vijay.prakash@applyease.com',
     linkedin: 'https://www.linkedin.com/in/vijay-prakash-b44a00287/',
     bio: "Vijay Prakash's internship journey spans across top institutions—from Piramal Finance and State Bank of India to consulting stints at Grant Thornton Bharat LLP, Teach For India, and the Rajiv Gandhi Cancer Institute and Research Centre. Having walked the path himself, Vijay is now helping to optimize internship strategies and navigate competitive selections with confidence.",
-    companies: ['Nation with NaMo', 'Piramal Finance', 'State Bank of India', 'Grant Thornton Bharat LLP', 'Teach For India', 'Rajiv Gandhi Cancer Institute'],
+    companies: [
+      { name: 'Nation with NaMo', logo: 'https://i.ibb.co/mCqxdDXM/Nation-with-Na-Mo.png' },
+      { name: 'Piramal Finance', logo: 'https://i.ibb.co/gFyBXpWg/Piramal-Financejpg.jpg' },
+      { name: 'State Bank of India', logo: 'https://i.ibb.co/ycVZq6ff/SBI.png' },
+      { name: 'Grant Thornton Bharat LLP', logo: 'https://i.ibb.co/F4K9vH4C/Grant-Thornton-Bharat-LLP.png' },
+      { name: 'Teach For India', logo: 'https://i.ibb.co/jknb9m6P/Teach-For-India.png' },
+      { name: 'Rajiv Gandhi Cancer Institute', logo: 'https://i.ibb.co/mVvmwd8D/Rajiv-Gandhi-Cancer-Institute-and-Research-Centre.jpg' }
+    ],
   },
   {
     name: 'Ishan Ranjan',
@@ -148,7 +165,12 @@ export default function Home() {
     email: 'ishan.ranjan@applyease.com',
     linkedin: 'https://www.linkedin.com/in/ishanranjan13/',
     bio: "From ITC Limited to Equirus (Investment Banking), from HDFC Bank Capital to Bajaj Allianz General Insurance, Ishan has cracked some of the most sought-after internships across domains. Now serving as the Outreach Supervisor at ApplyEase, he's combining his industry exposure with a drive to support others. Having walked the path himself, Ishan is now helping peers optimize their internship strategies and navigate competitive selections with confidence.",
-    companies: ['ITC Limited', 'Equirus (Investment Banking)', 'HDFC Bank Capital', 'Bajaj Allianz General Insurance'],
+    companies: [
+      { name: 'ITC Limited', logo: 'https://i.ibb.co/XZHLfVqN/ITC-Limited.png' },
+      { name: 'Equirus (Investment Banking)', logo: 'https://i.ibb.co/7TX3dVV/Equirus-Investment-Banking.png' },
+      { name: 'HDFC Bank Capital', logo: 'https://i.ibb.co/9mv4ZPtM/HDFC-Bank-Capital.jpg' },
+      { name: 'Bajaj Allianz General Insurance', logo: 'https://i.ibb.co/JRLHkQpr/Bajaj-Allianz-General-Insurance.png' }
+    ],
   },
   {
     name: 'Priyansh Sinha',
@@ -159,7 +181,13 @@ export default function Home() {
     email: 'priyansh.sinha@applyease.com',
     linkedin: 'https://www.linkedin.com/in/priyansh-sinha-548157247/',
     bio: "With stints at ICICI Bank, Protiviti, Drishti IAS, Veetaday Industries, Priyansh Sinha has consistently demonstrated clarity of thought and execution. Now joining Nation with NaMo, he's poised to bridge consulting, finance, and policy. Priyansh now uses his experience to assist others in optimising the outreach process—helping them navigate the internship maze with structure, focus, and actionable insights.",
-    companies: ['Nation with NaMo', 'ICICI Bank', 'Protiviti', 'Drishti IAS', 'Veetaday Industries'],
+    companies: [
+      { name: 'Nation with NaMo', logo: 'https://i.ibb.co/mCqxdDXM/Nation-with-Na-Mo.png' },
+      { name: 'ICICI Bank', logo: 'https://i.ibb.co/5hD90Nk7/ICICI-Bank.jpg' },
+      { name: 'Protiviti', logo: 'https://i.ibb.co/9HGrJkzZ/Protiviti-Consulting.png' },
+      { name: 'Drishti IAS', logo: 'https://i.ibb.co/WWsRSVwP/Drishti-IAS.jpg' },
+      { name: 'Veetaday Industries', logo: 'https://i.ibb.co/Y4Y8Q1XD/Veetaday-Industries.jpg' }
+    ],
   },
 ];
 
@@ -332,11 +360,25 @@ export default function Home() {
                             <Building className="h-5 w-5 text-primary" />
                             Company Experience
                           </h4>
-                          <div className="flex flex-wrap gap-2">
+                          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                             {member.companies.map((company, i) => (
-                              <Badge key={i} variant="secondary">
-                                {company}
-                              </Badge>
+                               <div key={i} className="flex flex-col items-center text-center gap-2 p-2 border rounded-lg bg-secondary/50">
+                                {company.logo ? (
+                                  <div className="w-16 h-16 relative flex items-center justify-center bg-white rounded-md p-1 border shadow-sm">
+                                    <Image 
+                                      src={company.logo} 
+                                      alt={`${company.name} logo`} 
+                                      fill
+                                      className="object-contain rounded-sm" 
+                                    />
+                                  </div>
+                                ) : (
+                                  <div className="w-16 h-16 flex items-center justify-center bg-muted rounded-md border">
+                                    <Building className="h-8 w-8 text-muted-foreground" />
+                                  </div>
+                                )}
+                                <span className="text-xs font-semibold mt-1">{company.name}</span>
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -544,8 +586,7 @@ export default function Home() {
                                               src={company.logo} 
                                               alt={`${company.name} logo`} 
                                               fill
-                                              objectFit="contain"
-                                              className="rounded-sm" 
+                                              className="object-contain rounded-sm" 
                                             />
                                           </div>
                                         )}
