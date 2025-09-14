@@ -22,6 +22,7 @@ import {
   ShoppingBag,
   MessageSquare,
   Building,
+  Package,
 } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -52,7 +53,7 @@ export default function Home() {
     {
       icon: <FileText className="h-10 w-10 text-primary" />,
       title: 'CV Creation Service',
-      price: '₹1499 ($17.99)',
+      price: '₹1999',
       description:
         'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
       link: 'https://tally.so/r/mROg2P',
@@ -60,7 +61,7 @@ export default function Home() {
     {
       icon: <Send className="h-10 w-10 text-primary" />,
       title: 'Outreach Service',
-      price: '₹999 ($11.99)',
+      price: '₹1499',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
       link: 'https://tally.so/r/mROg2P',
@@ -68,10 +69,23 @@ export default function Home() {
     {
       icon: <Users className="h-10 w-10 text-primary" />,
       title: 'Mentorship Service',
-      price: '₹499 ($5.99)',
+      price: '₹999',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
       link: 'https://tally.so/r/mROg2P',
+    },
+     {
+      icon: <Package className="h-10 w-10 text-primary" />,
+      title: 'Complete Career Package',
+      price: '₹2997',
+      description: 'Get all three services at discounted rates - save money while accelerating your career growth.',
+      link: 'https://tally.so/r/mROg2P',
+      isBundle: true,
+      bundleItems: [
+        { name: 'CV Creation', oldPrice: '₹1999', newPrice: '₹1499' },
+        { name: 'Outreach Service', oldPrice: '₹1499', newPrice: '₹999' },
+        { name: 'Mentorship Service', oldPrice: '₹999', newPrice: '₹499' },
+      ],
     },
   ];
 
@@ -118,7 +132,7 @@ export default function Home() {
     companies: [
       { name: 'Ditto Insurance', logo: 'https://i.ibb.co/4R0JsZD4/Ditto-Insurance.png' },
       { name: 'Motorola Solutions', logo: 'https://i.ibb.co/zTLF8f9v/Motorola-Solutions.webp' },
-      { name: 'Current Noodles and Snacks', logo: 'https://i.ibb.co/zhFmq4bY/Current-Noodles-and-Snacks.png' },
+      { name: 'Current Noodles and Snacks', logo: 'https://i.ibb.co/2Zt61p8/current-noodles.png' },
       { name: 'Vayut Aeronautics', logo: 'https://i.ibb.co/8gFjTswq/Vayut-Aeronautics.jpg' }
     ],
   },
@@ -165,7 +179,7 @@ export default function Home() {
     companies: [
       { name: 'Nation with NaMo', logo: 'https://i.ibb.co/mCqxdDXM/Nation-with-Na-Mo.png' },
       { name: 'ICICI Bank', logo: 'https://i.ibb.co/5hD90Nk7/ICICI-Bank.jpg' },
-      { name: 'Protiviti', logo: 'https://i.ibb.co/9HGrJkzZ/Protiviti-Consulting.png' },
+      { name: 'Protiviti', logo: 'https://i.ibb.co/k2x2N0M/protiviti.png' },
       { name: 'Drishti IAS', logo: 'https://i.ibb.co/zVKj4LMy/Drishti-IAS.png' },
       { name: 'Veetaday Industries', logo: 'https://i.ibb.co/Y4Y8Q1XD/Veetaday-Industries.jpg' }
     ],
@@ -233,23 +247,43 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-2">
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className="flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                  className={`flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl ${service.isBundle ? 'lg:col-span-2' : ''}`}
                 >
                   <CardHeader className="items-center">
                     {service.icon}
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
-                    <p className="text-3xl font-bold text-primary">
-                      {service.price}
-                    </p>
+                    <CardTitle className="text-2xl text-center">{service.title}</CardTitle>
+                     {!service.isBundle && (
+                        <p className="text-3xl font-bold text-primary">
+                          {service.price}
+                        </p>
+                      )}
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <CardDescription className="text-center">
-                      {service.description}
-                    </CardDescription>
+                     {service.isBundle ? (
+                      <div className="space-y-4">
+                        <p className="text-center text-muted-foreground">{service.description}</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                          {service.bundleItems?.map(item => (
+                            <div key={item.name} className="p-4 bg-secondary/50 rounded-lg">
+                               <p className="font-semibold">{item.name}</p>
+                               <p className="text-muted-foreground line-through">{item.oldPrice}</p>
+                               <p className="font-bold text-lg text-primary">{item.newPrice}</p>
+                            </div>
+                          ))}
+                        </div>
+                         <p className="text-center text-3xl font-bold text-primary mt-4">
+                          Total: {service.price}
+                        </p>
+                      </div>
+                    ) : (
+                      <CardDescription className="text-center">
+                        {service.description}
+                      </CardDescription>
+                    )}
                   </CardContent>
                   <CardFooter>
                     <Button asChild className="w-full">
