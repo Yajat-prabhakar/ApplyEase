@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
     bio: "As a B.Com (Hons.) student at SRCC and CA Foundation qualifier, I bring a blend of analytical and strategic skills through experiences at Unilever, where I gained exposure to global operations, and at The Electric Eel Founder's Office, where I worked closely on business growth initiatives. My role at TEDxSRCC further strengthened my leadership, organizational, and stakeholder management abilities. These experiences have shaped my interest in finance, strategy, and business operations, and I am keen to apply my skills to drive impactful solutions in dynamic environments.",
     linkedin: 'https://www.linkedin.com/in/vidisha-shree-433a42298/',
     companiesSecured: [
-      { name: 'Primus Partners Pvt Ltd', logo: 'https://i.ibb.co/DP7mfKHC/primus.png' },
+      { name: 'Hindustan Unilever Limited', logo: 'https://i.ibb.co/k6V4dDjL/HUL.jpg' },
       { name: 'SBI', logo: 'https://i.ibb.co/ycVZq6ff/SBI.png' }
     ],
   },
