@@ -99,7 +99,7 @@ export default function Home() {
     role: 'Director at Fidelity International',
     credentials: 'Mentor at ApplyEase',
     experience: '18+ years',
-    image: 'https://picsum.photos/seed/pragati/100/100',
+    image: 'https://i.ibb.co/nsP7WhRJ/pragati-khare.jpg',
     fallback: 'PK',
     email: 'pragati.khare@applyease.com',
     linkedin: 'https://www.linkedin.com/in/pragati-khare-a116a232/',
@@ -110,7 +110,7 @@ export default function Home() {
     name: 'Aviral Bhadauria',
     role: 'Incoming at Ditto Insurance',
     credentials: 'Outreach Mentor at ApplyEase',
-    image: 'https://picsum.photos/seed/aviral/100/100',
+    image: 'https://i.ibb.co/wNVzYZfy/Aviral-bh.jpg',
     fallback: 'AB',
     email: 'aviral.bhadauria@applyease.com',
     linkedin: 'https://www.linkedin.com/in/aviral-bhadauria/',
@@ -121,7 +121,7 @@ export default function Home() {
     name: 'Arya Kumari',
     role: 'Incoming at Tata Group (IHCL)',
     credentials: 'Outreach Mentor at ApplyEase',
-    image: 'https://picsum.photos/seed/arya/100/100',
+    image: 'https://i.ibb.co/Kj3hhvHC/arya-kumar.jpg',
     fallback: 'AK',
     email: 'arya.kumari@applyease.com',
     linkedin: 'https://www.linkedin.com/in/arya-kumari-a959a0283/',
@@ -132,7 +132,7 @@ export default function Home() {
     name: 'Vijay Prakash',
     role: 'Incoming Intern at Nation with NaMo',
     credentials: 'Outreach Mentor at ApplyEase',
-    image: 'https://picsum.photos/seed/vijay/100/100',
+    image: 'https://i.ibb.co/BVr02wyN/vijay.jpg',
     fallback: 'VP',
     email: 'vijay.prakash@applyease.com',
     linkedin: 'https://www.linkedin.com/in/vijay-prakash-b44a00287/',
@@ -143,7 +143,7 @@ export default function Home() {
     name: 'Ishan Ranjan',
     role: 'Outreach Supervisor at ApplyEase',
     credentials: 'Senior outreach supervisor and strategy guide',
-    image: 'https://picsum.photos/seed/ishan/100/100',
+    image: 'https://i.ibb.co/G68tz6Q/ishan.jpg',
     fallback: 'IR',
     email: 'ishan.ranjan@applyease.com',
     linkedin: 'https://www.linkedin.com/in/ishanranjan13/',
@@ -154,7 +154,7 @@ export default function Home() {
     name: 'Priyansh Sinha',
     role: 'Incoming at Nation with NaMo',
     credentials: 'Outreach Mentor at ApplyEase',
-    image: 'https://picsum.photos/seed/priyansh/100/100',
+    image: 'https://i.ibb.co/MyKqwbX7/priyansh.jpg',
     fallback: 'PS',
     email: 'priyansh.sinha@applyease.com',
     linkedin: 'https://www.linkedin.com/in/priyansh-sinha-548157247/',
@@ -458,6 +458,7 @@ export default function Home() {
                                 <CardFooter className="mt-auto border-t p-6">
                                   <div className="flex items-center">
                                     <Avatar className="mr-4 h-12 w-12">
+                                      <AvatarImage src={testimonial.image} alt={testimonial.name} />
                                       <AvatarFallback>
                                         {testimonial.avatar}
                                       </AvatarFallback>
@@ -479,6 +480,7 @@ export default function Home() {
                             <DialogHeader className="p-6 pb-0">
                               <div className="flex items-start gap-6">
                                 <Avatar className="h-24 w-24 border-4 border-primary">
+                                  <AvatarImage src={testimonial.image} alt={testimonial.name} />
                                   <AvatarFallback>
                                     {testimonial.avatar}
                                   </AvatarFallback>
