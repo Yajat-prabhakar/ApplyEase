@@ -369,7 +369,7 @@ export default function Home() {
                                       src={company.logo} 
                                       alt={`${company.name} logo`} 
                                       fill
-                                      className="object-contain rounded-sm" 
+                                      className="object-contain rounded-sm p-1" 
                                     />
                                   </div>
                                 ) : (
@@ -586,7 +586,7 @@ export default function Home() {
                                               src={company.logo} 
                                               alt={`${company.name} logo`} 
                                               fill
-                                              className="object-contain rounded-sm" 
+                                              className="object-contain rounded-sm p-1" 
                                             />
                                           </div>
                                         )}
