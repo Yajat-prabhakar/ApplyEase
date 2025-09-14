@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
     quote:
       'The experience with Apply Ease was effortless. They managed every detail with precision and care, so I could focus on my priorities. I landed the opportunity without any stress, all thanks to their seamless service!',
     name: 'Keshav Mittal',
-    title: 'Student at SRCC',
+    title: 'Public Policy and Research Intern at Primus Partners Pvt Ltd',
     avatar: 'KM',
     image: 'https://i.ibb.co/7xq5jy5q/Keshav-Mital.jpg',
     rating: 5,
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     quote:
       'Apply Ease is a game-changer. Their team took full ownership of the process, ensuring everything was handled perfectly and on time. I just focused on my work while they made the opportunity happen for me. Simply outstanding!',
     name: 'Pratik Kumar',
-    title: 'Student at SRCC',
+    title: 'Intern at Zomato',
     avatar: 'PK',
     image: 'https://i.ibb.co/DHp1hsTt/Pratik-Kumar.jpg',
     rating: 4,
@@ -70,7 +70,7 @@ const testimonials: Testimonial[] = [
     quote:
       'Apply Ease made everything so simple for me. I just sat back and relaxed while their expert team handled every step of the process. Thanks to them, I landed the opportunity effortlessly. Highly recommended for anyone seeking a stress-free experience!',
     name: 'Vidisha Shree',
-    title: 'Student at SRCC',
+    title: 'Intern at Primus Partners Pvt Ltd',
     avatar: 'VS',
     image: 'https://i.ibb.co/SX8j2v1n/Vidisha-Shree.jpg',
     rating: 5,
@@ -85,7 +85,7 @@ const testimonials: Testimonial[] = [
     quote:
       "From start to finish, Apply Ease handled all the complexities without me having to worry about a thing. Their professionalism and attention to detail gave me complete confidence. I'm thrilled with the outcome and can't thank them enough!",
     name: 'Alok Kumar',
-    title: 'Student at SRCC',
+    title: 'Summer Intern at Bajaj Capital Ltd',
     avatar: 'AK',
     image: 'https://i.ibb.co/27KK47KH/Alok-Kumar.jpg',
     rating: 5,
@@ -101,7 +101,7 @@ const testimonials: Testimonial[] = [
     quote:
       'Apply Ease turned what seemed complicated into a simple, smooth experience. I just sat back while their team managed everything end-to-end. The result? A successful outcome without any of the usual stress. Highly trustworthy!',
     name: 'Rishi Kumar Sinha',
-    title: "Student at SRCC",
+    title: "Finance Intern at Shriram Finance Limited",
     avatar: 'RS',
     image: 'https://i.ibb.co/rGjyW3tx/Rishi-kumar-Sinha.jpg',
     rating: 4,

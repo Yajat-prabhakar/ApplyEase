@@ -132,9 +132,9 @@ export default function Home() {
     linkedin: 'https://www.linkedin.com/in/arya-kumari-a959a0283/',
     bio: 'From Britannia Industries Limited and Frost & Sullivan to the Office of the Delhi University Vice Chancellor, Arya has taken on diverse roles in research, strategy, and operations. Now joining Tata IHCL, she brings a unique blend of precision, adaptability, and drive. Having navigated multiple selections herself, Arya is now empowering others to refine their application journeys and break into competitive internships.',
     companies: [
-      { name: 'Tata IHCL', logo: 'https://i.ibb.co/zWmTdPKf/Tata-Group-IHCL.webp' },
-      { name: 'Britannia Industries Limited', logo: 'https://i.ibb.co/zWdxdDnY/Britannia-Industries-Limited.jpg' },
-      { name: 'Frost & Sullivan', logo: 'https://i.ibb.co/RkRNwzv5/Frost-Sullivan.jpg' },
+      { name: 'Tata IHCL', logo: 'https://i.ibb.co/HfXCqbMJ/Tata-IHCL.webp' },
+      { name: 'Britannia Industries Limited', logo: 'https://i.ibb.co/Fksg5C4p/Britannia-Industries-Limited.webp' },
+      { name: 'Frost & Sullivan', logo: 'https://i.ibb.co/20d4wLj3/Frost-Sullivan.png' },
     ],
   },
   {
@@ -149,8 +149,8 @@ export default function Home() {
     companies: [
       { name: 'ITC Limited', logo: 'https://i.ibb.co/XZHLfVqN/ITC-Limited.png' },
       { name: 'Equirus (Investment Banking)', logo: 'https://i.ibb.co/7TX3dVV/Equirus.png' },
-      { name: 'HDFC Bank Capital', logo: 'https://i.ibb.co/9mv4ZPtM/HDFC-Bank-Capital.jpg' },
-      { name: 'Bajaj Allianz General Insurance', logo: 'https://i.ibb.co/JRLHkQpr/Bajaj-Allianz-General-Insurance.png' }
+      { name: 'HDFC Bank Capital', logo: 'https://i.ibb.co/t5RNRTy/HDFC-Bank-Capital.webp' },
+      { name: 'Bajaj Allianz General Insurance', logo: 'https://i.ibb.co/rGp2Bpmr/Bajaj-Allianz-General-Insurance.png' }
     ],
   },
   {
@@ -166,7 +166,7 @@ export default function Home() {
       { name: 'Nation with NaMo', logo: 'https://i.ibb.co/mCqxdDXM/Nation-with-Na-Mo.png' },
       { name: 'ICICI Bank', logo: 'https://i.ibb.co/5hD90Nk7/ICICI-Bank.jpg' },
       { name: 'Protiviti', logo: 'https://i.ibb.co/9HGrJkzZ/Protiviti-Consulting.png' },
-      { name: 'Drishti IAS', logo: 'https://i.ibb.co/WWsRSVwP/Drishti-IAS.jpg' },
+      { name: 'Drishti IAS', logo: 'https://i.ibb.co/zVKj4LMy/Drishti-IAS.png' },
       { name: 'Veetaday Industries', logo: 'https://i.ibb.co/Y4Y8Q1XD/Veetaday-Industries.jpg' }
     ],
   },
