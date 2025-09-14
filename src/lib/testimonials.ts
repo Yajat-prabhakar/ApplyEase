@@ -1,6 +1,11 @@
 
 'use server';
 
+export interface Company {
+  name: string;
+  logo?: string;
+}
+
 export interface Testimonial {
   quote: string;
   name: string;
@@ -9,7 +14,7 @@ export interface Testimonial {
   rating: number;
   bio: string;
   linkedin: string;
-  companiesSecured: string[];
+  companiesSecured: Company[];
 }
 
 const testimonials: Testimonial[] = [
@@ -23,8 +28,8 @@ const testimonials: Testimonial[] = [
     bio: 'I am Keshav Mittal. A person living only because of his dreams. Hobbies include playing Chess, sports and spending time alone. A passionate for Finance and Accountancy. A desire to improve myself better than last day. A constant eagerness for learning and growth.',
     linkedin: 'https://www.linkedin.com/in/keshav-mittal-0719b4286/',
     companiesSecured: [
-      'Primus Partners Pvt Ltd (Public Policy and Research Intern)',
-      'Benori (Market Research and Data Analytics)',
+      { name: 'Primus Partners Pvt Ltd (Public Policy and Research Intern)', logo: 'https://i.ibb.co/DP7mfKHC/primus.png'},
+      { name: 'Benori (Market Research and Data Analytics)', logo: 'https://i.ibb.co/ZRxPhJFd/benori.jpg' },
     ],
   },
   {
@@ -36,7 +41,11 @@ const testimonials: Testimonial[] = [
     rating: 4,
     bio: "I have gained hands-on experience through an internship at Shadowfax, where I optimized logistics, inventory management, and workforce scheduling to improve productivity. At CDF-SRCC, I led ventures such as Rivaayat, which boosted 32 artisans' income by 115% through partnerships with Bain & Co., Vodafone, and ITC; Naqsh, an upcycling initiative that generated ₹1,00,000 revenue with ~30% margin in four months; and Arpan, a sustainable incense business scaled with 40% projected revenue growth and a supply chain expansion to 15 manufacturers. These experiences have sharpened my skills in business strategy, operations, and entrepreneurship, enabling me to drive measurable growth and impact.",
     linkedin: 'https://www.linkedin.com/in/pratik-kumar-0b2487220/',
-    companiesSecured: ['SBI (State Bank of India)', 'Zomato', 'Protiviti Consulting'],
+    companiesSecured: [
+      { name: 'SBI (State Bank of India)', logo: 'https://i.ibb.co/ycVZq6ff/SBI.png' }, 
+      { name: 'Zomato', logo: 'https://i.ibb.co/cSC65jzn/Zomato.webp' }, 
+      { name: 'Protiviti Consulting', logo: 'https://i.ibb.co/9HGrJkzZ/Protiviti-Consulting.png' }
+    ],
   },
   {
     quote:
@@ -47,7 +56,11 @@ const testimonials: Testimonial[] = [
     rating: 5,
     bio: "As a Business Analyst at Picapool, I apply my expertise in accounting and corporate law to deliver data-driven insights and strategic recommendations that support business growth. Alongside my role, I am pursuing the CA Intermediate certification and have completed the Do Well Do Good Future Leaders Program, as well as certifications from NISM (Research Analyst) and SEBI (Investor Certificate). These experiences have strengthened my ability to combine financial analysis, legal understanding, and strategic thinking to drive value for the organization and its stakeholders.",
     linkedin: 'https://www.linkedin.com/in/vijay-prakash-b44a00287/',
-    companiesSecured: ['Acuvon Consulting (Project Intern)', 'Piramal Finance', 'SBI (State Bank of India)'],
+    companiesSecured: [
+        { name: 'Acuvon Consulting (Project Intern)', logo: 'https://i.ibb.co/sv3HZcNx/Acuvon-Consulting.jpg' }, 
+        { name: 'Piramal Finance', logo: 'https://i.ibb.co/gFyBXpWg/Piramal-Financejpg.jpg' }, 
+        { name: 'SBI (State Bank of India)', logo: 'https://i.ibb.co/ycVZq6ff/SBI.png' }
+    ],
   },
   {
     quote:
@@ -58,7 +71,10 @@ const testimonials: Testimonial[] = [
     rating: 5,
     bio: "As a B.Com (Hons.) student at SRCC and CA Foundation qualifier, I bring a blend of analytical and strategic skills through experiences at Unilever, where I gained exposure to global operations, and at The Electric Eel Founder's Office, where I worked closely on business growth initiatives. My role at TEDxSRCC further strengthened my leadership, organizational, and stakeholder management abilities. These experiences have shaped my interest in finance, strategy, and business operations, and I am keen to apply my skills to drive impactful solutions in dynamic environments.",
     linkedin: 'https://www.linkedin.com/in/vidisha-shree-433a42298/',
-    companiesSecured: ['Primus Partners Pvt Ltd', 'SBI'],
+    companiesSecured: [
+      { name: 'Primus Partners Pvt Ltd', logo: 'https://i.ibb.co/DP7mfKHC/primus.png' },
+      { name: 'SBI', logo: 'https://i.ibb.co/ycVZq6ff/SBI.png' }
+    ],
   },
   {
     quote:
@@ -70,9 +86,9 @@ const testimonials: Testimonial[] = [
     bio: "I am a B.Com (Hons.) student at SRCC '26/27 with experience spanning consulting, growth strategy, and public policy. I have worked with organizations like Primus Partners, Frost & Sullivan, the Ministry of Commerce & Industry, and Picapool, where I contributed to business expansion, analytics, and strategic projects. Beyond internships, I serve as General Secretary at Delta SRCC and engage in initiatives such as Vittshala, NSS, and Changement Services, honing my leadership and problem-solving skills.",
     linkedin: 'https://www.linkedin.com/in/alok-kumar-8063b8292/',
     companiesSecured: [
-      'Primus Partners Pvt Ltd (Consulting Intern)',
-      'Bajaj Capital Ltd (Summer Intern)',
-      'Ministry of Commerce and Industry, Government of India (Internship)',
+      { name: 'Primus Partners Pvt Ltd (Consulting Intern)', logo: 'https://i.ibb.co/DP7mfKHC/primus.png' },
+      { name: 'Bajaj Capital Ltd (Summer Intern)', logo: 'https://i.ibb.co/KzfhKCSt/Bajaj-Capital-Ltd.jpg' },
+      { name: 'Ministry of Commerce and Industry, Government of India (Internship)', logo: 'https://i.ibb.co/Pzhdyyty/Ministry-of-Commerce-and-Industry-Government-of-India.png' },
     ],
   },
   {
@@ -85,9 +101,9 @@ const testimonials: Testimonial[] = [
     bio: "I am a B.Com (Hons.) student at SRCC '25 who enjoys turning complex financial data into clear strategies that improve efficiency and unlock growth. My journey spans roles at Shriram Finance, Bajaj Allianz, Vodafone Idea, SPA Capital, and 24x7 Security, where I worked on everything from building financial models and streamlining compliance processes to designing risk frameworks and supporting post-merger analysis. Alongside internships, I've actively contributed to SRCC's Debating Society and student leadership initiatives, which sharpened my ability to think critically and communicate persuasively. What drives me is the challenge of connecting numbers with strategy to create solutions that make organizations more agile, resilient, and future-ready.",
     linkedin: 'https://www.linkedin.com/in/rishi-kumar-sinha-b92347230/',
     companiesSecured: [
-      'Shriram Finance Limited (Finance Intern)',
-      'SPA Capital Services Ltd. (Project Consultant)',
-      'Bajaj Allianz General Insurance (Strategy Intern)',
+      { name: 'Shriram Finance Limited (Finance Intern)', logo: 'https://i.ibb.co/21611bT5/Shriram-Finance-Limited.png' },
+      { name: 'SPA Capital Services Ltd. (Project Consultant)', logo: 'https://i.ibb.co/HDSncbpf/SPA-Capital-Services-Ltd.png' },
+      { name: 'Bajaj Allianz General Insurance (Strategy Intern)', logo: 'https://i.ibb.co/JRLHkQpr/Bajaj-Allianz-General-Insurance.png' },
     ],
   },
 ];

@@ -535,8 +535,9 @@ export default function Home() {
                                   </h4>
                                    <div className="flex flex-wrap gap-2">
                                     {testimonial.companiesSecured.map((company, i) => (
-                                      <Badge key={i} variant="secondary">
-                                        {company}
+                                      <Badge key={i} variant="secondary" className="flex items-center gap-2">
+                                        {company.logo && <Image src={company.logo} alt={`${company.name} logo`} width={16} height={16} className="rounded-sm" />}
+                                        <span>{company.name}</span>
                                       </Badge>
                                     ))}
                                   </div>
