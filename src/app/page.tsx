@@ -77,6 +77,7 @@ export default function Home() {
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
       link: 'https://tally.so/r/mROg2P',
       isFullWidth: true,
+      order: 1, // Order for mobile
     },
      {
       icon: <Package className="h-10 w-10 text-primary" />,
@@ -91,6 +92,7 @@ export default function Home() {
         { name: 'Outreach Service', oldPrice: '₹1499', newPrice: '₹999' },
         { name: 'Mentorship Service', oldPrice: '₹999', newPrice: '₹499' },
       ],
+      order: 2, // Order for mobile
     },
   ];
 
@@ -256,7 +258,7 @@ export default function Home() {
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className={`flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl ${service.isBundle || service.isFullWidth ? 'lg:col-span-2' : ''}`}
+                  className={`flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl ${service.isBundle || service.isFullWidth ? `lg:col-span-2 ${service.order === 1 ? 'lg:order-1' : 'lg:order-2'}`: ''} ${service.order === 1 ? 'order-1' : service.order === 2 ? 'order-2' : 'order-none'}`}
                 >
                   <CardHeader className="items-center">
                     {service.icon}
