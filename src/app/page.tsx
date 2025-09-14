@@ -76,6 +76,7 @@ export default function Home() {
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
       link: 'https://tally.so/r/mROg2P',
+      isFullWidth: true,
     },
      {
       icon: <Package className="h-10 w-10 text-primary" />,
@@ -255,7 +256,7 @@ export default function Home() {
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className={`flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl ${service.isBundle ? 'lg:col-span-2' : ''}`}
+                  className={`flex h-full flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl ${service.isBundle || service.isFullWidth ? 'lg:col-span-2' : ''}`}
                 >
                   <CardHeader className="items-center">
                     {service.icon}
