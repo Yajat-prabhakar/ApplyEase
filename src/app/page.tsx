@@ -533,12 +533,22 @@ export default function Home() {
                                     <ShoppingBag className="h-5 w-5 text-primary" />
                                     Opportunities Secured
                                   </h4>
-                                   <div className="flex flex-wrap gap-2">
+                                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                                     {testimonial.companiesSecured.map((company, i) => (
-                                      <Badge key={i} variant="secondary" className="flex items-center gap-2">
-                                        {company.logo && <Image src={company.logo} alt={`${company.name} logo`} width={16} height={16} className="rounded-sm" />}
-                                        <span>{company.name}</span>
-                                      </Badge>
+                                      <div key={i} className="flex flex-col items-center text-center gap-2 p-2 border rounded-lg bg-secondary/50">
+                                        {company.logo && (
+                                          <div className="w-16 h-16 relative flex items-center justify-center bg-white rounded-md p-1 border shadow-sm">
+                                            <Image 
+                                              src={company.logo} 
+                                              alt={`${company.name} logo`} 
+                                              layout="fill"
+                                              objectFit="contain"
+                                              className="rounded-sm" 
+                                            />
+                                          </div>
+                                        )}
+                                        <span className="text-xs font-semibold mt-1">{company.name}</span>
+                                      </div>
                                     ))}
                                   </div>
                                 </div>
