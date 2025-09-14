@@ -52,7 +52,7 @@ export default function Home() {
     {
       icon: <FileText className="h-10 w-10 text-primary" />,
       title: 'CV Creation Service',
-      price: '₹1500',
+      price: '₹1499 ($18)',
       description:
         'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
       link: 'https://tally.so/r/mROg2P',
@@ -60,7 +60,7 @@ export default function Home() {
     {
       icon: <Send className="h-10 w-10 text-primary" />,
       title: 'Outreach Service',
-      price: '₹999',
+      price: '₹999 ($12)',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
       link: 'https://tally.so/r/mROg2P',
@@ -68,7 +68,7 @@ export default function Home() {
     {
       icon: <Users className="h-10 w-10 text-primary" />,
       title: 'Mentorship Service',
-      price: '₹499',
+      price: '₹499 ($6)',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
       link: 'https://tally.so/r/mROg2P',
