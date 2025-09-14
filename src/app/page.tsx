@@ -541,7 +541,7 @@ export default function Home() {
                                             <Image 
                                               src={company.logo} 
                                               alt={`${company.name} logo`} 
-                                              layout="fill"
+                                              fill
                                               objectFit="contain"
                                               className="rounded-sm" 
                                             />
