@@ -139,24 +139,6 @@ export default function Home() {
     ],
   },
   {
-    name: 'Vijay Prakash',
-    role: 'Incoming Intern at Nation with NaMo',
-    credentials: 'Outreach Mentor at ApplyEase',
-    image: 'https://i.ibb.co/BVr02wyN/vijay.jpg',
-    fallback: 'VP',
-    email: 'vijay.prakash@applyease.com',
-    linkedin: 'https://www.linkedin.com/in/vijay-prakash-b44a00287/',
-    bio: "Vijay Prakash's internship journey spans across top institutions—from Piramal Finance and State Bank of India to consulting stints at Grant Thornton Bharat LLP, Teach For India, and the Rajiv Gandhi Cancer Institute and Research Centre. Having walked the path himself, Vijay is now helping to optimize internship strategies and navigate competitive selections with confidence.",
-    companies: [
-      { name: 'Nation with NaMo', logo: 'https://i.ibb.co/mCqxdDXM/Nation-with-Na-Mo.png' },
-      { name: 'Piramal Finance', logo: 'https://i.ibb.co/gFyBXpWg/Piramal-Financejpg.jpg' },
-      { name: 'State Bank of India', logo: 'https://i.ibb.co/ycVZq6ff/SBI.png' },
-      { name: 'Grant Thornton Bharat LLP', logo: 'https://i.ibb.co/F4K9vH4C/Grant-Thornton-Bharat-LLP.png' },
-      { name: 'Teach For India', logo: 'https://i.ibb.co/jknb9m6P/Teach-For-India.png' },
-      { name: 'Rajiv Gandhi Cancer Institute', logo: 'https://i.ibb.co/mVvmwd8D/Rajiv-Gandhi-Cancer-Institute-and-Research-Centre.jpg' }
-    ],
-  },
-  {
     name: 'Ishan Ranjan',
     role: 'Outreach Supervisor at ApplyEase',
     credentials: 'Senior outreach supervisor and strategy guide',
