@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth dark h-full" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="https://i.ibb.co/TxFpyL72/apply-ease.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
