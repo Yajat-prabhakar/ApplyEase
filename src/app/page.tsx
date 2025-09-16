@@ -57,7 +57,7 @@ export default function Home() {
       priceUsd: '$23.99',
       description:
         'A professional CV crafted by experts from SRCC, IIT, and Esteem organizations. Scrutinized for quality to make you stand out.',
-      link: 'https://tally.so/r/mROg2P',
+      link: 'https://tally.so/r/w7Q5L9',
     },
     {
       icon: <Send className="h-10 w-10 text-primary" />,
@@ -66,7 +66,7 @@ export default function Home() {
       priceUsd: '$17.99',
       description:
         'We handle strategic outreach to target companies and contacts on your behalf, opening doors to new opportunities.',
-      link: 'https://tally.so/r/mROg2P',
+      link: 'https://tally.so/r/mKXy5k',
     },
     {
       icon: <Users className="h-10 w-10 text-primary" />,
@@ -75,14 +75,14 @@ export default function Home() {
       priceUsd: '$11.99',
       description:
         'Receive personal guidance from industry experts for career growth, interview preparation, and skill development.',
-      link: 'https://tally.so/r/mROg2P',
+      link: 'https://tally.so/r/3qyeRk',
       isFullWidth: true,
       order: 1, // Order for mobile
     },
      {
       icon: <Package className="h-10 w-10 text-primary" />,
       title: 'Complete Career Package',
-      price: '₹2997',
+      price: '₹2999',
       priceUsd: '$35.99',
       description: 'Get all three services at discounted rates - save money while accelerating your career growth.',
       link: 'https://tally.so/r/mROg2P',
@@ -139,7 +139,7 @@ export default function Home() {
     companies: [
       { name: 'Ditto Insurance', logo: 'https://i.ibb.co/4R0JsZD4/Ditto-Insurance.png' },
       { name: 'Motorola Solutions', logo: 'https://i.ibb.co/zTLF8f9v/Motorola-Solutions.webp' },
-      { name: 'Current Noodles and Snacks', logo: 'https://i.ibb.co/2Zt61p8/current-noodles.png' },
+      { name: 'Current Noodles and Snacks', logo: 'https://i.ibb.co/zhFmq4bY/Current-Noodles-and-Snacks.png' },
       { name: 'Vayut Aeronautics', logo: 'https://i.ibb.co/8gFjTswq/Vayut-Aeronautics.jpg' }
     ],
   },
@@ -186,7 +186,7 @@ export default function Home() {
     companies: [
       { name: 'Nation with NaMo', logo: 'https://i.ibb.co/mCqxdDXM/Nation-with-Na-Mo.png' },
       { name: 'ICICI Bank', logo: 'https://i.ibb.co/5hD90Nk7/ICICI-Bank.jpg' },
-      { name: 'Protiviti', logo: 'https://i.ibb.co/k2x2N0M/protiviti.png' },
+      { name: 'Protiviti', logo: 'https://i.ibb.co/9HGrJkzZ/Protiviti-Consulting.png' },
       { name: 'Drishti IAS', logo: 'https://i.ibb.co/zVKj4LMy/Drishti-IAS.png' },
       { name: 'Veetaday Industries', logo: 'https://i.ibb.co/Y4Y8Q1XD/Veetaday-Industries.jpg' }
     ],
@@ -323,7 +323,7 @@ export default function Home() {
         {/* About Us Section */}
         <section
           id="about"
-          className="w-full bg-secondary/50 py-12 md:py-24 lg:py-32"
+          className="w-full bg-secondary/50 py-12 md:py-10 lg:py-12"
         >
           <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:gap-10">
             <div className="space-y-4 text-center">
@@ -447,16 +447,6 @@ export default function Home() {
                   </DialogContent>
                 </Dialog>
               ))}
-            </div>
-            <div className="mt-8 flex justify-center">
-              <Image
-                src="https://picsum.photos/seed/103/800/400"
-                data-ai-hint="team collaboration"
-                width={800}
-                height={400}
-                alt="Our Team"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-              />
             </div>
           </div>
         </section>
